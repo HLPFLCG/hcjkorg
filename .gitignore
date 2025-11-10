@@ -1,0 +1,35 @@
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Dependencies
+node_modules/
+vendor/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Build Files
+dist/
+build/
+*.log
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+
+# Large Files
+*.psd
+*.ai
+*.sketch
