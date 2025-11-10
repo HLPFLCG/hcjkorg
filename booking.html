@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Booking & Packages | HCJK Collection - Photography Services</title>
+    <meta name="title" content="Booking & Packages | HCJK Collection - Photography Services">
+    <meta name="description" content="View HCJK Collection's photography packages and pricing. Book your wedding, portrait, or custom photography session today.">
+    <meta name="keywords" content="photography packages, photography pricing, book photographer, wedding photography packages, portrait session booking">
+    <meta name="author" content="HCJK Collection">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.hcjk.org/booking.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.hcjk.org/booking.html">
+    <meta property="og:title" content="Booking & Packages | HCJK Collection - Photography Services">
+    <meta property="og:description" content="View photography packages and book your session with HCJK Collection.">
+    <meta property="og:image" content="https://www.hcjk.org/assets/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.hcjk.org/booking.html">
+    <meta property="twitter:title" content="Booking & Packages | HCJK Collection - Photography Services">
+    <meta property="twitter:description" content="View photography packages and book your session with HCJK Collection.">
+    <meta property="twitter:image" content="https://www.hcjk.org/assets/images/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <style>
+        .pricing-table {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-2xl);
+        }
+        
+        .pricing-card {
+            background: var(--color-white);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-2xl);
+            box-shadow: var(--shadow-luxury);
+            transition: var(--transition-all);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-luxury-hover);
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid var(--color-accent);
+        }
+        
+        .pricing-badge {
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: var(--color-accent);
+            color: var(--color-white);
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: var(--font-size-xs);
+            font-weight: var(--font-weight-semibold);
+            text-transform: uppercase;
+            letter-spacing: var(--letter-spacing-wider);
+        }
+        
+        .pricing-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+            padding-bottom: var(--spacing-lg);
+            border-bottom: 2px solid var(--color-light-gray);
+        }
+        
+        .pricing-title {
+            font-family: var(--font-primary);
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-normal);
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-primary);
+        }
+        
+        .pricing-price {
+            font-family: var(--font-primary);
+            font-size: var(--font-size-3xl);
+            font-weight: var(--font-weight-light);
+            color: var(--color-secondary);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .pricing-period {
+            font-size: var(--font-size-sm);
+            color: var(--color-dark-gray);
+            text-transform: uppercase;
+            letter-spacing: var(--letter-spacing-wider);
+        }
+        
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .pricing-features li {
+            padding: var(--spacing-sm) 0;
+            border-bottom: 1px solid var(--color-light-gray);
+            display: flex;
+            align-items: center;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--color-accent);
+            font-weight: var(--font-weight-bold);
+            margin-right: var(--spacing-sm);
+            font-size: var(--font-size-lg);
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: var(--spacing-2xl);
+            background: var(--color-white);
+            box-shadow: var(--shadow-md);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--color-light-gray);
+        }
+        
+        .comparison-table th {
+            background: var(--color-primary);
+            color: var(--color-white);
+            font-weight: var(--font-weight-semibold);
+            text-transform: uppercase;
+            letter-spacing: var(--letter-spacing-wide);
+            font-size: var(--font-size-sm);
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .comparison-table tr:hover {
+            background: var(--color-light-gray);
+        }
+        
+        .check-icon {
+            color: var(--color-accent);
+            font-weight: var(--font-weight-bold);
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Skip to Content -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/images/logo/logo.svg" alt="HCJK Collection Logo" width="120" height="40">
+            </a>
+            
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="navbar-menu" id="navbar-menu">
+                <li class="navbar-item">
+                    <a href="index.html" class="navbar-link">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="portfolio.html" class="navbar-link">Portfolio</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="about.html" class="navbar-link">About</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="blog.html" class="navbar-link">Blog</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="booking.html" class="navbar-link active">Booking</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="contact.html" class="navbar-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" style="min-height: 50vh;">
+            <div class="hero-background">
+                <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=1920&q=80" 
+                     alt="Photography booking" 
+                     loading="eager">
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title animate-fade-in-up">Booking & Packages</h1>
+                <p class="hero-subtitle animate-fade-in-up" style="animation-delay: 0.2s;">Investment in Timeless Memories</p>
+            </div>
+        </section>
+        
+        <!-- Introduction Section -->
+        <section class="section">
+            <div class="container text-center">
+                <h2 class="heading-script text-secondary mb-sm scroll-reveal">Choose Your Package</h2>
+                <p class="lead scroll-reveal" style="max-width: 800px; margin: 0 auto;">
+                    Each package is thoughtfully designed to capture your unique story with elegance and artistry. 
+                    All packages include professional editing, online gallery, and print release.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Wedding Packages -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="heading-section scroll-reveal">Wedding Photography Packages</h2>
+                <div class="pricing-table scroll-reveal">
+                    <!-- Essential Package -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Essential</h3>
+                            <div class="pricing-price">$2,500</div>
+                            <div class="pricing-period">Starting Price</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>Up to 6 hours coverage</li>
+                            <li>One photographer</li>
+                            <li>300+ edited digital images</li>
+                            <li>Online gallery</li>
+                            <li>Print release</li>
+                            <li>Engagement session</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline btn-block">Inquire Now</a>
+                    </div>
+                    
+                    <!-- Premium Package -->
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Premium</h3>
+                            <div class="pricing-price">$3,800</div>
+                            <div class="pricing-period">Starting Price</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>Up to 8 hours coverage</li>
+                            <li>Two photographers</li>
+                            <li>500+ edited digital images</li>
+                            <li>Online gallery</li>
+                            <li>Print release</li>
+                            <li>Engagement session</li>
+                            <li>Wedding album (10x10")</li>
+                            <li>USB with all images</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary btn-block">Inquire Now</a>
+                    </div>
+                    
+                    <!-- Luxury Package -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Luxury</h3>
+                            <div class="pricing-price">$5,500</div>
+                            <div class="pricing-period">Starting Price</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>Full day coverage (10+ hours)</li>
+                            <li>Two photographers</li>
+                            <li>700+ edited digital images</li>
+                            <li>Online gallery</li>
+                            <li>Print release</li>
+                            <li>Engagement session</li>
+                            <li>Luxury wedding album (12x12")</li>
+                            <li>USB with all images</li>
+                            <li>Parent albums (2)</li>
+                            <li>Canvas print (16x20")</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary btn-block">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Portrait Packages -->
+        <section class="section">
+            <div class="container">
+                <h2 class="heading-section scroll-reveal">Portrait Photography Packages</h2>
+                <div class="pricing-table scroll-reveal">
+                    <!-- Mini Session -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Mini Session</h3>
+                            <div class="pricing-price">$350</div>
+                            <div class="pricing-period">30 Minutes</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>30-minute session</li>
+                            <li>One location</li>
+                            <li>15+ edited digital images</li>
+                            <li>Online gallery</li>
+                            <li>Print release</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline btn-block">Book Now</a>
+                    </div>
+                    
+                    <!-- Standard Session -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Standard Session</h3>
+                            <div class="pricing-price">$650</div>
+                            <div class="pricing-period">1 Hour</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>1-hour session</li>
+                            <li>Up to 2 locations</li>
+                            <li>40+ edited digital images</li>
+                            <li>Online gallery</li>
+                            <li>Print release</li>
+                            <li>Wardrobe changes</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary btn-block">Book Now</a>
+                    </div>
+                    
+                    <!-- Extended Session -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Extended Session</h3>
+                            <div class="pricing-price">$950</div>
+                            <div class="pricing-period">2 Hours</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>2-hour session</li>
+                            <li>Multiple locations</li>
+                            <li>75+ edited digital images</li>
+                            <li>Online gallery</li>
+                            <li>Print release</li>
+                            <li>Wardrobe changes</li>
+                            <li>8x10" print (5)</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary btn-block">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Add-Ons Section -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="heading-section scroll-reveal">Add-Ons & Extras</h2>
+                <div class="grid grid-3 scroll-reveal">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Additional Hours</h3>
+                            <p class="text-secondary" style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-light); margin: var(--spacing-md) 0;">
+                                $300/hour
+                            </p>
+                            <p class="card-text">
+                                Extend your coverage time for those special moments that deserve more attention.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Second Photographer</h3>
+                            <p class="text-secondary" style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-light); margin: var(--spacing-md) 0;">
+                                $500
+                            </p>
+                            <p class="card-text">
+                                Capture multiple perspectives and ensure no moment is missed.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Wedding Album</h3>
+                            <p class="text-secondary" style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-light); margin: var(--spacing-md) 0;">
+                                From $800
+                            </p>
+                            <p class="card-text">
+                                Luxury heirloom albums with premium materials and custom design.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Canvas Prints</h3>
+                            <p class="text-secondary" style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-light); margin: var(--spacing-md) 0;">
+                                From $200
+                            </p>
+                            <p class="card-text">
+                                Museum-quality canvas prints ready to display in your home.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Engagement Session</h3>
+                            <p class="text-secondary" style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-light); margin: var(--spacing-md) 0;">
+                                $450
+                            </p>
+                            <p class="card-text">
+                                Perfect for save-the-dates and getting comfortable with the camera.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Travel Fee</h3>
+                            <p class="text-secondary" style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-light); margin: var(--spacing-md) 0;">
+                                Varies
+                            </p>
+                            <p class="card-text">
+                                Destination weddings and sessions outside local area. Contact for quote.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- What's Included Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="heading-section scroll-reveal">What's Included in Every Package</h2>
+                <div class="grid grid-2 scroll-reveal" style="max-width: 900px; margin: 0 auto;">
+                    <div class="flex gap-md mb-lg">
+                        <div style="color: var(--color-accent); font-size: var(--font-size-2xl);">✓</div>
+                        <div>
+                            <h3 class="font-serif mb-xs">Professional Editing</h3>
+                            <p class="text-muted">Every image is carefully edited to perfection while maintaining natural beauty.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-md mb-lg">
+                        <div style="color: var(--color-accent); font-size: var(--font-size-2xl);">✓</div>
+                        <div>
+                            <h3 class="font-serif mb-xs">Online Gallery</h3>
+                            <p class="text-muted">Private online gallery for easy viewing, sharing, and downloading.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-md mb-lg">
+                        <div style="color: var(--color-accent); font-size: var(--font-size-2xl);">✓</div>
+                        <div>
+                            <h3 class="font-serif mb-xs">Print Release</h3>
+                            <p class="text-muted">Full rights to print your images for personal use.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-md mb-lg">
+                        <div style="color: var(--color-accent); font-size: var(--font-size-2xl);">✓</div>
+                        <div>
+                            <h3 class="font-serif mb-xs">Pre-Session Consultation</h3>
+                            <p class="text-muted">Planning session to discuss your vision and preferences.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-md mb-lg">
+                        <div style="color: var(--color-accent); font-size: var(--font-size-2xl);">✓</div>
+                        <div>
+                            <h3 class="font-serif mb-xs">Professional Equipment</h3>
+                            <p class="text-muted">Top-of-the-line cameras, lenses, and backup equipment.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-md mb-lg">
+                        <div style="color: var(--color-accent); font-size: var(--font-size-2xl);">✓</div>
+                        <div>
+                            <h3 class="font-serif mb-xs">Sneak Peek</h3>
+                            <p class="text-muted">Preview images delivered within 48 hours of your session.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Booking Process Section -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="heading-section scroll-reveal">The Booking Process</h2>
+                <div class="grid grid-4 scroll-reveal">
+                    <div class="text-center">
+                        <div style="width: 80px; height: 80px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-md); color: var(--color-white); font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold);">
+                            1
+                        </div>
+                        <h3 class="font-serif mb-sm">Inquiry</h3>
+                        <p class="text-muted">
+                            Contact me with your date, location, and photography needs.
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div style="width: 80px; height: 80px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-md); color: var(--color-white); font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold);">
+                            2
+                        </div>
+                        <h3 class="font-serif mb-sm">Consultation</h3>
+                        <p class="text-muted">
+                            We'll discuss your vision, review packages, and answer questions.
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div style="width: 80px; height: 80px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-md); color: var(--color-white); font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold);">
+                            3
+                        </div>
+                        <h3 class="font-serif mb-sm">Contract & Deposit</h3>
+                        <p class="text-muted">
+                            Sign contract and pay deposit to secure your date.
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div style="width: 80px; height: 80px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-md); color: var(--color-white); font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold);">
+                            4
+                        </div>
+                        <h3 class="font-serif mb-sm">Your Session</h3>
+                        <p class="text-muted">
+                            Relax and enjoy while I capture your beautiful moments.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Payment Information Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="heading-section scroll-reveal">Payment Information</h2>
+                <div class="grid grid-2 scroll-reveal" style="max-width: 900px; margin: 0 auto;">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Payment Plans Available</h3>
+                            <p class="card-text">
+                                I understand that photography is an investment. Flexible payment plans are available 
+                                with a 30% deposit to secure your date and the remaining balance due before or on 
+                                the day of your session.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Accepted Payment Methods</h3>
+                            <p class="card-text">
+                                I accept credit cards, debit cards, bank transfers, and checks. Secure online 
+                                payment links are provided for your convenience. All transactions are processed 
+                                securely through Stripe.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="heading-section scroll-reveal">Booking FAQs</h2>
+                <div class="scroll-reveal" style="max-width: 800px; margin: 0 auto;">
+                    <div class="mb-xl">
+                        <h3 class="font-serif mb-sm">How far in advance should I book?</h3>
+                        <p>
+                            For weddings, I recommend booking 9-12 months in advance. For portrait sessions, 
+                            2-4 weeks notice is ideal, though I can sometimes accommodate last-minute requests.
+                        </p>
+                    </div>
+                    
+                    <div class="mb-xl">
+                        <h3 class="font-serif mb-sm">What is your cancellation policy?</h3>
+                        <p>
+                            The deposit is non-refundable but can be transferred to a new date within one year. 
+                            Cancellations made more than 60 days before the event receive a 50% refund of payments 
+                            beyond the deposit.
+                        </p>
+                    </div>
+                    
+                    <div class="mb-xl">
+                        <h3 class="font-serif mb-sm">Do you travel for sessions?</h3>
+                        <p>
+                            Yes! I'm available for travel anywhere in the world. Travel fees vary based on location 
+                            and may include transportation, accommodation, and per diem expenses.
+                        </p>
+                    </div>
+                    
+                    <div class="mb-xl">
+                        <h3 class="font-serif mb-sm">When will I receive my photos?</h3>
+                        <p>
+                            Portrait sessions are delivered within 2-3 weeks. Weddings take 6-8 weeks due to the 
+                            extensive editing process. You'll receive a sneak peek within 48 hours!
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <p class="text-center">
+                            <a href="faq.html" class="btn btn-secondary">View All FAQs</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action Section -->
+        <section class="section bg-dark text-white">
+            <div class="container text-center">
+                <h2 class="heading-hero text-white scroll-reveal">Ready to Book Your Session?</h2>
+                <p class="lead text-white mb-xl scroll-reveal" style="opacity: 0.9;">
+                    Let's discuss your vision and create something beautiful together.
+                </p>
+                <div class="flex-center gap-md scroll-reveal">
+                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                    <a href="portfolio.html" class="btn btn-outline-light">View Portfolio</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HCJK Collection</h3>
+                    <p>
+                        Luxury photography services capturing life's most precious moments 
+                        with elegance, artistry, and timeless beauty.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/hcjkcollection" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/hcjkcollection" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.pinterest.com/hcjkcollection" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="portfolio.html#weddings">Wedding Photography</a></li>
+                        <li><a href="portfolio.html#portraits">Portrait Photography</a></li>
+                        <li><a href="portfolio.html#landscapes">Landscape Photography</a></li>
+                        <li><a href="portfolio.html#cityscapes">Cityscape Photography</a></li>
+                        <li><a href="portfolio.html#macro">Macro Photography</a></li>
+                        <li><a href="contact.html">Custom Projects</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 HCJK Collection. All rights reserved. | Designed with ♥ for timeless photography</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/analytics.js"></script>
+</body>
+</html>
