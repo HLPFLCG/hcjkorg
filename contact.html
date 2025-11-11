@@ -156,7 +156,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         
                         <form id="contact-form" action="https://formspree.io/f/xblqjywk" method="POST">
                             <input type="hidden" name="_subject" value="New Contact Form Submission - HCJK Photography">
-                            <input type="hidden" name="_next" value="https://hcjk.org/contact.html?success=true">
+                            <input type="hidden" name="_next" value="https://hcjk.org/thank-you.html">
                             
                             <div class="form-group">
                                 <label for="name" class="form-label">Your Name *</label>
@@ -495,15 +495,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <script>
         // Form submission handling
-        // Check if form was successfully submitted (redirected back from Formspree)
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('success') === 'true') {
-            document.getElementById('form-success').style.display = 'block';
-            document.getElementById('form-success').textContent = 'Thank you for your message! I\'ll get back to you within 24-48 hours.';
-            // Remove success parameter from URL
-            window.history.replaceState({}, document.title, window.location.pathname);
-        }
-
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             // Basic form validation
             const name = document.getElementById('name').value;
