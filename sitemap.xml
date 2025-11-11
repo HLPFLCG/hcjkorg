@@ -26,13 +26,13 @@
         <priority>0.9</priority>
     </url>
     
-    <!-- Blog Page -->
-    <url>
+    <!-- Blog Page - Temporarily Hidden -->
+    <!-- <url>
         <loc>https://hcjk.org/blog.html</loc>
         <lastmod>2024-11-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
-    </url>
+    </url> -->
     
     <!-- Contact Page -->
     <url>
