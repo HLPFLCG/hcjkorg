@@ -1,0 +1,1037 @@
+/* ============================================
+   HCJK Photography - Complete Color Palette CSS
+   Beige, Black, Merlot Theme
+   Version: 1.0.0
+   Last Updated: 2024
+   ============================================ */
+
+/* ============================================
+   TABLE OF CONTENTS
+   1. CSS Variables (Color Definitions)
+   2. Base Styles
+   3. Typography
+   4. Buttons
+   5. Links
+   6. Navigation
+   7. Cards & Components
+   8. Sections & Layouts
+   9. Forms
+   10. Footer
+   11. Utility Classes
+   12. Responsive Overrides
+   ============================================ */
+
+/* ============================================
+   1. CSS VARIABLES (COLOR DEFINITIONS)
+   ============================================ */
+
+:root {
+  /* ===== PRIMARY PALETTE ===== */
+  --color-primary-bg: #F5F1E8;        /* Soft Cream - Main backgrounds */
+  --color-primary-text: #1A1A1A;      /* Rich Charcoal - Body text */
+  --color-primary-accent: #6B1C23;    /* Deep Merlot - CTAs & accents */
+  
+  /* ===== BEIGE VARIATIONS ===== */
+  --beige-light: #F5F1E8;             /* Soft Cream */
+  --beige-medium: #E8DCC8;            /* Warm Sand */
+  --beige-dark: #D4C4A8;              /* Golden Beige */
+  
+  /* ===== BLACK VARIATIONS ===== */
+  --black-pure: #000000;              /* Pure Black */
+  --black-rich: #1A1A1A;              /* Rich Charcoal */
+  --black-slate: #2C2C2C;             /* Dark Slate */
+  
+  /* ===== MERLOT VARIATIONS ===== */
+  --merlot-deep: #6B1C23;             /* Deep Merlot */
+  --merlot-classic: #8B2332;          /* Classic Burgundy */
+  --merlot-rich: #A52A3A;             /* Rich Wine */
+  
+  /* ===== SEMANTIC COLOR ASSIGNMENTS ===== */
+  --color-background: var(--beige-light);
+  --color-background-alt: var(--beige-medium);
+  --color-background-dark: var(--black-rich);
+  --color-text: var(--black-rich);
+  --color-text-light: var(--black-slate);
+  --color-text-lighter: rgba(26, 26, 26, 0.7);
+  --color-text-inverse: var(--beige-light);
+  --color-heading: var(--merlot-deep);
+  --color-heading-alt: var(--black-rich);
+  --color-accent: var(--merlot-deep);
+  --color-accent-hover: var(--merlot-classic);
+  --color-accent-light: var(--merlot-rich);
+  --color-border: var(--beige-dark);
+  --color-border-light: rgba(212, 196, 168, 0.5);
+  
+  /* ===== BUTTON COLORS ===== */
+  --btn-primary-bg: var(--merlot-deep);
+  --btn-primary-text: var(--beige-light);
+  --btn-primary-hover: var(--merlot-classic);
+  --btn-primary-active: #5A1720;
+  
+  --btn-secondary-bg: var(--beige-dark);
+  --btn-secondary-text: var(--black-rich);
+  --btn-secondary-hover: var(--beige-medium);
+  --btn-secondary-active: #C4B498;
+  
+  --btn-outline-border: var(--merlot-deep);
+  --btn-outline-text: var(--merlot-deep);
+  --btn-outline-hover-bg: var(--merlot-deep);
+  --btn-outline-hover-text: var(--beige-light);
+  
+  /* ===== LINK COLORS ===== */
+  --link-color: var(--merlot-deep);
+  --link-hover: var(--merlot-classic);
+  --link-visited: var(--merlot-deep);
+  --link-active: var(--merlot-classic);
+  
+  /* ===== FORM COLORS ===== */
+  --input-bg: var(--beige-light);
+  --input-border: var(--beige-dark);
+  --input-border-focus: var(--merlot-deep);
+  --input-text: var(--black-rich);
+  --input-placeholder: var(--black-slate);
+  --input-error: #C41E3A;
+  --input-success: #2D5016;
+  
+  /* ===== OVERLAY & SHADOW COLORS ===== */
+  --overlay-dark: rgba(26, 26, 26, 0.7);
+  --overlay-darker: rgba(26, 26, 26, 0.85);
+  --overlay-merlot: rgba(107, 28, 35, 0.9);
+  --overlay-merlot-light: rgba(107, 28, 35, 0.7);
+  --shadow-sm: 0 2px 4px rgba(26, 26, 26, 0.08);
+  --shadow-md: 0 4px 8px rgba(26, 26, 26, 0.12);
+  --shadow-lg: 0 8px 16px rgba(26, 26, 26, 0.15);
+  --shadow-xl: 0 12px 24px rgba(26, 26, 26, 0.18);
+  
+  /* ===== GRADIENT COLORS ===== */
+  --gradient-merlot: linear-gradient(135deg, var(--merlot-deep) 0%, var(--merlot-classic) 100%);
+  --gradient-merlot-dark: linear-gradient(135deg, var(--merlot-deep) 0%, var(--black-rich) 100%);
+  --gradient-beige: linear-gradient(135deg, var(--beige-light) 0%, var(--beige-medium) 100%);
+  --gradient-overlay: linear-gradient(180deg, transparent 0%, rgba(26, 26, 26, 0.7) 100%);
+}
+
+/* ============================================
+   2. BASE STYLES
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--merlot-deep);
+  color: var(--beige-light);
+}
+
+::-moz-selection {
+  background-color: var(--merlot-deep);
+  color: var(--beige-light);
+}
+
+/* ============================================
+   3. TYPOGRAPHY
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-heading);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h4 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  color: var(--color-heading-alt);
+}
+
+h5 {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  color: var(--color-heading-alt);
+}
+
+h6 {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  color: var(--color-heading-alt);
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--color-text-light);
+}
+
+.small-text {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-muted {
+  color: var(--color-text-lighter);
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+em, i {
+  font-style: italic;
+}
+
+/* ============================================
+   4. BUTTONS
+   ============================================ */
+
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+}
+
+.btn:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(107, 28, 35, 0.3);
+}
+
+.btn-primary:active {
+  background-color: var(--btn-primary-active);
+  transform: translateY(0);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  border: 2px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+  background-color: var(--btn-secondary-hover);
+  border-color: var(--beige-medium);
+}
+
+.btn-secondary:active {
+  background-color: var(--btn-secondary-active);
+}
+
+/* Outline Button */
+.btn-outline {
+  background-color: transparent;
+  color: var(--btn-outline-text);
+  border: 2px solid var(--btn-outline-border);
+}
+
+.btn-outline:hover {
+  background-color: var(--btn-outline-hover-bg);
+  color: var(--btn-outline-hover-text);
+}
+
+/* Outline Light (for dark backgrounds) */
+.btn-outline-light {
+  background-color: transparent;
+  color: var(--beige-light);
+  border: 2px solid var(--beige-light);
+}
+
+.btn-outline-light:hover {
+  background-color: var(--beige-light);
+  color: var(--merlot-deep);
+}
+
+/* Button Sizes */
+.btn-sm {
+  padding: 8px 20px;
+  font-size: 0.875rem;
+}
+
+.btn-lg {
+  padding: 16px 40px;
+  font-size: 1.125rem;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* Button States */
+.btn:disabled,
+.btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ============================================
+   5. LINKS
+   ============================================ */
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+a:visited {
+  color: var(--link-visited);
+}
+
+a:active {
+  color: var(--link-active);
+}
+
+a:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.link-underline {
+  border-bottom: 1px solid var(--link-color);
+}
+
+.link-underline:hover {
+  border-bottom-color: var(--link-hover);
+}
+
+/* ============================================
+   6. NAVIGATION
+   ============================================ */
+
+.navbar {
+  background-color: var(--beige-light);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1.25rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: var(--shadow-md);
+  padding: 0.75rem 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-logo:hover {
+  color: var(--color-accent);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-accent);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Mobile Menu Toggle */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-text);
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* ============================================
+   7. CARDS & COMPONENTS
+   ============================================ */
+
+.card {
+  background-color: var(--beige-light);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.card-header {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 0.5rem;
+}
+
+.card-body {
+  color: var(--color-text);
+}
+
+.card-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border-light);
+}
+
+/* Feature Cards */
+.feature-card {
+  background-color: var(--beige-light);
+  padding: 2.5rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-lg);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--merlot-deep);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  color: var(--beige-light);
+  font-size: 1.75rem;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+  background-color: var(--beige-medium);
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--merlot-deep);
+  position: relative;
+}
+
+.testimonial-quote {
+  font-style: italic;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.testimonial-role {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+}
+
+/* ============================================
+   8. SECTIONS & LAYOUTS
+   ============================================ */
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-alt {
+  background-color: var(--color-background-alt);
+}
+
+.section-dark {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-inverse);
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4,
+.section-dark h5,
+.section-dark h6 {
+  color: var(--beige-light);
+}
+
+.section-gradient {
+  background: var(--gradient-merlot);
+  color: var(--beige-light);
+}
+
+.section-gradient h1,
+.section-gradient h2,
+.section-gradient h3,
+.section-gradient h4,
+.section-gradient h5,
+.section-gradient h6 {
+  color: var(--beige-light);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.container-narrow {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+  background: var(--gradient-merlot);
+  color: var(--beige-light);
+  padding: 8rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--overlay-merlot);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  color: var(--beige-light);
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Dividers */
+.divider {
+  height: 2px;
+  background-color: var(--merlot-deep);
+  margin: 3rem 0;
+  opacity: 0.3;
+}
+
+.divider-light {
+  background-color: var(--beige-dark);
+}
+
+/* ============================================
+   9. FORMS
+   ============================================ */
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+  font-size: 0.9375rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--input-text);
+  background-color: var(--input-bg);
+  border: 2px solid var(--input-border);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--input-border-focus);
+  box-shadow: 0 0 0 3px rgba(107, 28, 35, 0.1);
+}
+
+.form-control::placeholder {
+  color: var(--input-placeholder);
+  opacity: 0.7;
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+select.form-control {
+  cursor: pointer;
+}
+
+/* Form Validation States */
+.form-control.is-valid {
+  border-color: var(--input-success);
+}
+
+.form-control.is-invalid {
+  border-color: var(--input-error);
+}
+
+.form-feedback {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.form-feedback.valid {
+  color: var(--input-success);
+}
+
+.form-feedback.invalid {
+  color: var(--input-error);
+}
+
+/* Checkbox & Radio */
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.form-check-input {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  accent-color: var(--merlot-deep);
+}
+
+.form-check-label {
+  cursor: pointer;
+  font-size: 0.9375rem;
+  color: var(--color-text);
+}
+
+/* ============================================
+   10. FOOTER
+   ============================================ */
+
+.footer {
+  background-color: var(--black-rich);
+  color: var(--beige-light);
+  padding: 4rem 0 2rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-section h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--beige-light);
+  margin-bottom: 1.25rem;
+}
+
+.footer-section p,
+.footer-section a {
+  color: var(--beige-medium);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+  font-size: 0.9375rem;
+}
+
+.footer-section a:hover {
+  color: var(--merlot-rich);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--black-slate);
+  color: var(--beige-medium);
+  font-size: 0.875rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--black-slate);
+  border-radius: 50%;
+  color: var(--beige-light);
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background-color: var(--merlot-deep);
+  transform: translateY(-3px);
+}
+
+/* ============================================
+   11. UTILITY CLASSES
+   ============================================ */
+
+/* Background Colors */
+.bg-cream { background-color: var(--beige-light); }
+.bg-sand { background-color: var(--beige-medium); }
+.bg-beige { background-color: var(--beige-dark); }
+.bg-black { background-color: var(--black-rich); }
+.bg-merlot { background-color: var(--merlot-deep); }
+.bg-burgundy { background-color: var(--merlot-classic); }
+.bg-wine { background-color: var(--merlot-rich); }
+
+/* Text Colors */
+.text-cream { color: var(--beige-light); }
+.text-black { color: var(--black-rich); }
+.text-merlot { color: var(--merlot-deep); }
+.text-burgundy { color: var(--merlot-classic); }
+.text-wine { color: var(--merlot-rich); }
+
+/* Border Colors */
+.border-cream { border-color: var(--beige-light); }
+.border-beige { border-color: var(--beige-dark); }
+.border-merlot { border-color: var(--merlot-deep); }
+
+/* Spacing Utilities */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+.mt-5 { margin-top: 3rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+.mb-5 { margin-bottom: 3rem; }
+
+.pt-1 { padding-top: 0.5rem; }
+.pt-2 { padding-top: 1rem; }
+.pt-3 { padding-top: 1.5rem; }
+.pt-4 { padding-top: 2rem; }
+.pt-5 { padding-top: 3rem; }
+
+.pb-1 { padding-bottom: 0.5rem; }
+.pb-2 { padding-bottom: 1rem; }
+.pb-3 { padding-bottom: 1.5rem; }
+.pb-4 { padding-bottom: 2rem; }
+.pb-5 { padding-bottom: 3rem; }
+
+/* Text Alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* Display Utilities */
+.d-none { display: none; }
+.d-block { display: block; }
+.d-inline { display: inline; }
+.d-inline-block { display: inline-block; }
+.d-flex { display: flex; }
+.d-grid { display: grid; }
+
+/* Flex Utilities */
+.flex-row { flex-direction: row; }
+.flex-column { flex-direction: column; }
+.justify-start { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.justify-between { justify-content: space-between; }
+.align-start { align-items: flex-start; }
+.align-center { align-items: center; }
+.align-end { align-items: flex-end; }
+
+/* Grid Utilities */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+
+/* Shadow Utilities */
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+
+/* Border Radius */
+.rounded { border-radius: 4px; }
+.rounded-lg { border-radius: 8px; }
+.rounded-full { border-radius: 9999px; }
+
+/* ============================================
+   12. RESPONSIVE OVERRIDES
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .hero {
+    padding: 5rem 0;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--beige-light);
+    padding: 1rem;
+    box-shadow: var(--shadow-lg);
+    gap: 0;
+  }
+
+  .nav-link {
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container,
+  .container-narrow {
+    padding: 0 15px;
+  }
+
+  .btn {
+    padding: 10px 24px;
+    font-size: 0.9375rem;
+  }
+
+  .btn-lg {
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  .navbar,
+  .footer,
+  .btn,
+  .nav-toggle {
+    display: none;
+  }
+
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  .section {
+    page-break-inside: avoid;
+  }
+}

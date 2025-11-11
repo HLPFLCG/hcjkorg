@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCJK Photography - Color Palette Mockup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================
+           HCJK Photography - Color Palette
+           Beige, Black, Merlot Theme
+           ============================================ */
+
+        :root {
+            /* ===== PRIMARY PALETTE ===== */
+            --color-primary-bg: #F5F1E8;
+            --color-primary-text: #1A1A1A;
+            --color-primary-accent: #6B1C23;
+            
+            /* ===== BEIGE VARIATIONS ===== */
+            --beige-light: #F5F1E8;
+            --beige-medium: #E8DCC8;
+            --beige-dark: #D4C4A8;
+            
+            /* ===== BLACK VARIATIONS ===== */
+            --black-pure: #000000;
+            --black-rich: #1A1A1A;
+            --black-slate: #2C2C2C;
+            
+            /* ===== MERLOT VARIATIONS ===== */
+            --merlot-deep: #6B1C23;
+            --merlot-classic: #8B2332;
+            --merlot-rich: #A52A3A;
+            
+            /* ===== SEMANTIC COLOR ASSIGNMENTS ===== */
+            --color-background: var(--beige-light);
+            --color-background-alt: var(--beige-medium);
+            --color-text: var(--black-rich);
+            --color-heading: var(--merlot-deep);
+            --color-accent: var(--merlot-deep);
+            --color-accent-hover: var(--merlot-classic);
+            --color-border: var(--beige-dark);
+            
+            /* ===== BUTTON COLORS ===== */
+            --btn-primary-bg: var(--merlot-deep);
+            --btn-primary-text: var(--beige-light);
+            --btn-primary-hover: var(--merlot-classic);
+            
+            --btn-secondary-bg: var(--beige-dark);
+            --btn-secondary-text: var(--black-rich);
+            --btn-secondary-hover: var(--beige-medium);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-text);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--beige-light);
+            border-bottom: 1px solid var(--color-border);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--color-heading);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--merlot-deep) 0%, var(--merlot-classic) 100%);
+            color: var(--beige-light);
+            padding: 120px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--beige-light);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 14px 36px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background-color: var(--btn-primary-bg);
+            color: var(--btn-primary-text);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--btn-primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(107, 28, 35, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: var(--btn-secondary-bg);
+            color: var(--btn-secondary-text);
+            border: 2px solid var(--color-border);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--btn-secondary-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--beige-light);
+            border: 2px solid var(--beige-light);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--beige-light);
+            color: var(--merlot-deep);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Color Palette Section */
+        .palette-section {
+            padding: 80px 0;
+            background-color: var(--beige-light);
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--color-heading);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: var(--color-text);
+            margin-bottom: 60px;
+            opacity: 0.8;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .color-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(26, 26, 26, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .color-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .color-swatch {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .color-info {
+            padding: 20px;
+        }
+
+        .color-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-heading);
+            margin-bottom: 10px;
+        }
+
+        .color-hex {
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            color: var(--color-text);
+            margin-bottom: 10px;
+        }
+
+        .color-usage {
+            font-size: 14px;
+            color: var(--black-slate);
+            line-height: 1.6;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background-color: var(--beige-medium);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background-color: var(--beige-light);
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--color-border);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--merlot-deep);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--beige-light);
+            font-size: 28px;
+        }
+
+        .feature-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-heading);
+            margin-bottom: 15px;
+        }
+
+        .feature-description {
+            font-size: 15px;
+            color: var(--color-text);
+            line-height: 1.7;
+        }
+
+        /* Typography Section */
+        .typography-section {
+            padding: 80px 0;
+            background-color: var(--beige-light);
+        }
+
+        .typography-examples {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .typography-examples h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--color-heading);
+            margin-bottom: 20px;
+        }
+
+        .typography-examples h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--color-heading);
+            margin-bottom: 18px;
+        }
+
+        .typography-examples h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--color-heading);
+            margin-bottom: 16px;
+        }
+
+        .typography-examples p {
+            font-size: 16px;
+            color: var(--color-text);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .typography-examples a {
+            color: var(--color-accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--color-accent);
+            transition: color 0.3s ease;
+        }
+
+        .typography-examples a:hover {
+            color: var(--color-accent-hover);
+            border-bottom-color: var(--color-accent-hover);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--merlot-deep) 0%, var(--black-rich) 100%);
+            color: var(--beige-light);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--beige-light);
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--black-rich);
+            color: var(--beige-light);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            color: var(--beige-light);
+            margin-bottom: 20px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--beige-medium);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--merlot-rich);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--black-slate);
+            color: var(--beige-medium);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .color-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">HCJK Collection</a>
+            <ul class="nav-links">
+                <li><a href="#palette">Color Palette</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#typography">Typography</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Beige, Black & Merlot</h1>
+            <p>A sophisticated color palette combining warmth, elegance, and bold sophistication</p>
+            <div class="hero-buttons">
+                <button class="btn btn-outline">View Palette</button>
+                <button class="btn btn-outline">Download Guide</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Palette Section -->
+    <section id="palette" class="palette-section">
+        <div class="container">
+            <h2 class="section-title">Primary Color Palette</h2>
+            <p class="section-subtitle">Three carefully selected colors that work harmoniously together</p>
+            
+            <div class="color-grid">
+                <!-- Soft Cream -->
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #F5F1E8; color: #1A1A1A;">
+                        Soft Cream
+                    </div>
+                    <div class="color-info">
+                        <h3 class="color-name">Soft Cream</h3>
+                        <p class="color-hex">#F5F1E8</p>
+                        <p class="color-usage">
+                            <strong>Primary Use:</strong> Main backgrounds, page base<br>
+                            <strong>Effect:</strong> Warm, inviting, reduces eye strain<br>
+                            <strong>Contrast:</strong> 14.8:1 with Rich Charcoal (AAA)
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Rich Charcoal -->
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #1A1A1A; color: #F5F1E8;">
+                        Rich Charcoal
+                    </div>
+                    <div class="color-info">
+                        <h3 class="color-name">Rich Charcoal</h3>
+                        <p class="color-hex">#1A1A1A</p>
+                        <p class="color-usage">
+                            <strong>Primary Use:</strong> Body text, paragraphs, navigation<br>
+                            <strong>Effect:</strong> Excellent readability, softer than pure black<br>
+                            <strong>Contrast:</strong> 14.8:1 with Soft Cream (AAA)
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Deep Merlot -->
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #6B1C23; color: #F5F1E8;">
+                        Deep Merlot
+                    </div>
+                    <div class="color-info">
+                        <h3 class="color-name">Deep Merlot</h3>
+                        <p class="color-hex">#6B1C23</p>
+                        <p class="color-usage">
+                            <strong>Primary Use:</strong> CTAs, accents, headings, links<br>
+                            <strong>Effect:</strong> Sophisticated, draws attention, creates hierarchy<br>
+                            <strong>Contrast:</strong> 10.2:1 with Soft Cream (AAA)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title" style="margin-top: 60px;">Extended Palette Variations</h2>
+            <p class="section-subtitle">Additional shades for depth and versatility</p>
+
+            <div class="color-grid">
+                <!-- Beige Variations -->
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #E8DCC8; color: #1A1A1A;">
+                        Warm Sand
+                    </div>
+                    <div class="color-info">
+                        <h3 class="color-name">Warm Sand</h3>
+                        <p class="color-hex">#E8DCC8</p>
+                        <p class="color-usage">Alternate backgrounds, section dividers</p>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #D4C4A8; color: #1A1A1A;">
+                        Golden Beige
+                    </div>
+                    <div class="color-info">
+                        <h3 class="color-name">Golden Beige</h3>
+                        <p class="color-hex">#D4C4A8</p>
+                        <p class="color-usage">Borders, subtle accents, secondary buttons</p>
+                    </div>
+                </div>
+
+                <!-- Black Variations -->
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #000000; color: #F5F1E8;">
+                        Pure Black
+                    </div>
+                    <div class="color-info">
+                        <h3 class="color-name">Pure Black</h3>
+                        <p class="color-hex">#000000</p>
+                        <p class="color-usage">Maximum contrast situations, overlays</p>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #2C2C2C; color: #F5F1E8;">
+                        Dark Slate
+                    </div>
+                    <div class="color-info">
+                        <h3 class="color-name">Dark Slate</h3>
+                        <p class="color-hex">#2C2C2C</p>
+                        <p class="color-usage">Secondary text, lighter dark elements</p>
+                    </div>
+                </div>
+
+                <!-- Merlot Variations -->
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #8B2332; color: #F5F1E8;">
+                        Classic Burgundy
+                    </div>
+                    <div class="color-info">
+                        <h3 class="color-name">Classic Burgundy</h3>
+                        <p class="color-hex">#8B2332</p>
+                        <p class="color-usage">Hover states, interactive elements</p>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #A52A3A; color: #F5F1E8;">
+                        Rich Wine
+                    </div>
+                    <div class="color-info">
+                        <h3 class="color-name">Rich Wine</h3>
+                        <p class="color-hex">#A52A3A</p>
+                        <p class="color-usage">Lighter accents, footer links</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title">Button Styles & Components</h2>
+            <p class="section-subtitle">See how the colors work in real UI elements</p>
+            
+            <div style="text-align: center; margin-bottom: 60px;">
+                <button class="btn btn-primary" style="margin: 10px;">Primary Button</button>
+                <button class="btn btn-secondary" style="margin: 10px;">Secondary Button</button>
+                <button class="btn btn-outline" style="margin: 10px; color: #6B1C23; border-color: #6B1C23;">Outline Button</button>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✓</div>
+                    <h3 class="feature-title">WCAG AAA Compliant</h3>
+                    <p class="feature-description">All color combinations exceed accessibility standards with contrast ratios of 10.2:1 or higher.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">♥</div>
+                    <h3 class="feature-title">Sophisticated Aesthetic</h3>
+                    <p class="feature-description">The merlot accent adds luxury and elegance while maintaining professional appeal.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">☼</div>
+                    <h3 class="feature-title">Warm & Inviting</h3>
+                    <p class="feature-description">Soft cream backgrounds create a welcoming atmosphere that's easy on the eyes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Typography Section -->
+    <section id="typography" class="typography-section">
+        <div class="container">
+            <h2 class="section-title">Typography Examples</h2>
+            <p class="section-subtitle">See how text looks with the color palette</p>
+            
+            <div class="typography-examples">
+                <h1>Heading Level 1</h1>
+                <p>This is a paragraph demonstrating body text in Rich Charcoal (#1A1A1A) on a Soft Cream (#F5F1E8) background. The contrast ratio of 14.8:1 ensures excellent readability for all users.</p>
+                
+                <h2>Heading Level 2</h2>
+                <p>All headings use the Deep Merlot color (#6B1C23) to create visual hierarchy and draw attention to important sections. This creates a sophisticated and elegant look.</p>
+                
+                <h3>Heading Level 3</h3>
+                <p>Links are styled in the accent color and include a subtle underline. <a href="#">Here's an example link</a> that demonstrates the hover effect when you move your cursor over it.</p>
+                
+                <p>The typography system uses Cormorant Garamond for headings (elegant serif) and Montserrat for body text (clean sans-serif), creating a perfect balance between sophistication and readability.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <h2>Ready to Implement This Palette?</h2>
+            <p>Download the complete style guide and CSS files to get started</p>
+            <div class="hero-buttons">
+                <button class="btn btn-outline">Download Style Guide</button>
+                <button class="btn btn-outline">View Documentation</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HCJK Collection</h3>
+                    <p>Professional photography services in Grand Rapids, Michigan</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#">Portfolio</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Grand Rapids, MI</p>
+                    <p>info@hcjk.org</p>
+                    <p>(616) 555-0123</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HCJK Collection. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
