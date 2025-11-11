@@ -5,29 +5,46 @@
 
 :root {
   /* ==================== COLORS ==================== */
+  /* Updated: Beige, Black, Merlot Color Palette */
   
   /* Primary Colors */
-  --color-primary: #2C2C2C;        /* Charcoal - main text */
-  --color-secondary: #8B7355;      /* Warm taupe - accents */
-  --color-accent: #D4AF87;         /* Soft gold - highlights */
+  --color-primary: #6B1C23;        /* Deep Merlot - primary accent */
+  --color-secondary: #1A1A1A;      /* Rich Charcoal - main text */
+  --color-accent: #6B1C23;         /* Deep Merlot - highlights */
   
-  /* Neutral Colors */
-  --color-background: #FAFAFA;     /* Off-white background */
+  /* Beige Variations */
+  --beige-light: #F5F1E8;          /* Soft Cream */
+  --beige-medium: #E8DCC8;         /* Warm Sand */
+  --beige-dark: #D4C4A8;           /* Golden Beige */
+  
+  /* Black Variations */
+  --black-pure: #000000;           /* Pure Black */
+  --black-rich: #1A1A1A;           /* Rich Charcoal */
+  --black-slate: #2C2C2C;          /* Dark Slate */
+  
+  /* Merlot Variations */
+  --merlot-deep: #6B1C23;          /* Deep Merlot */
+  --merlot-classic: #8B2332;       /* Classic Burgundy */
+  --merlot-rich: #A52A3A;          /* Rich Wine */
+  
+  /* Neutral Colors - Updated to match new palette */
+  --color-background: #F5F1E8;     /* Soft Cream background */
   --color-white: #FFFFFF;
-  --color-light-gray: #F5F5F5;
-  --color-medium-gray: #E0E0E0;
-  --color-dark-gray: #4A4A4A;
-  --color-black: #1A1A1A;
+  --color-light-gray: #E8DCC8;     /* Warm Sand */
+  --color-medium-gray: #D4C4A8;    /* Golden Beige */
+  --color-dark-gray: #2C2C2C;      /* Dark Slate */
+  --color-black: #1A1A1A;          /* Rich Charcoal */
   
-  /* Semantic Colors */
-  --color-success: #7C9885;        /* Sage green */
-  --color-error: #C17767;          /* Muted terracotta */
-  --color-warning: #D4A574;        /* Warm amber */
-  --color-info: #8B9DC3;           /* Soft blue */
+  /* Semantic Colors - Updated to complement new palette */
+  --color-success: #2D5016;        /* Deep green - complements merlot */
+  --color-error: #C41E3A;          /* Deep red - matches merlot family */
+  --color-warning: #D4A574;        /* Warm amber - kept for contrast */
+  --color-info: #6B1C23;           /* Deep Merlot - brand consistency */
   
-  /* Overlay Colors */
-  --overlay-light: rgba(255, 255, 255, 0.9);
-  --overlay-dark: rgba(44, 44, 44, 0.8);
+  /* Overlay Colors - Updated */
+  --overlay-light: rgba(245, 241, 232, 0.9);     /* Soft Cream overlay */
+  --overlay-dark: rgba(26, 26, 26, 0.8);         /* Rich Charcoal overlay */
+  --overlay-merlot: rgba(107, 28, 35, 0.9);      /* Deep Merlot overlay */
   --overlay-accent: rgba(212, 175, 135, 0.15);
   
   /* ==================== TYPOGRAPHY ==================== */
