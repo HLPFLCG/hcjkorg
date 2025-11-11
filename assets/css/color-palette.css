@@ -1,938 +1,579 @@
 /* ============================================
    HCJK Photography - Complete Color Palette CSS
    Beige, Black, Merlot Theme
-   Version: 1.0.0
+   Version: 2.0.0 - Refactored
    Last Updated: 2024
+   
+   CHANGES IN V2.0:
+   - Removed duplicate color variable definitions
+   - Removed !important declarations
+   - Improved CSS specificity
+   - Better organized structure
    ============================================ */
 
 /* ============================================
    TABLE OF CONTENTS
-   1. CSS Variables (Color Definitions)
-   2. Base Styles
-   3. Typography
-   4. Buttons
-   5. Links
-   6. Navigation
-   7. Cards & Components
-   8. Sections & Layouts
-   9. Forms
-   10. Footer
-   11. Utility Classes
-   12. Responsive Overrides
+   1. Base Styles
+   2. Typography
+   3. Buttons
+   4. Links
+   5. Navigation
+   6. Cards & Components
+   7. Sections & Layouts
+   8. Forms
+   9. Footer
+   10. Utility Classes
+   11. Responsive Overrides
+   12. Print Styles
    ============================================ */
 
 /* ============================================
-   1. CSS VARIABLES (COLOR DEFINITIONS)
+   1. BASE STYLES
    ============================================ */
 
-:root {
-  /* ===== PRIMARY PALETTE ===== */
-  --color-primary-bg: #F5F1E8;        /* Soft Cream - Main backgrounds */
-  --color-primary-text: #1A1A1A;      /* Rich Charcoal - Body text */
-  --color-primary-accent: #6B1C23;    /* Deep Merlot - CTAs & accents */
-  
-  /* ===== BEIGE VARIATIONS ===== */
-  --beige-light: #F5F1E8;             /* Soft Cream */
-  --beige-medium: #E8DCC8;            /* Warm Sand */
-  --beige-dark: #D4C4A8;              /* Golden Beige */
-  
-  /* ===== BLACK VARIATIONS ===== */
-  --black-pure: #000000;              /* Pure Black */
-  --black-rich: #1A1A1A;              /* Rich Charcoal */
-  --black-slate: #2C2C2C;             /* Dark Slate */
-  
-  /* ===== MERLOT VARIATIONS ===== */
-  --merlot-deep: #6B1C23;             /* Deep Merlot */
-  --merlot-classic: #8B2332;          /* Classic Burgundy */
-  --merlot-rich: #A52A3A;             /* Rich Wine */
-  
-  /* ===== SEMANTIC COLOR ASSIGNMENTS ===== */
-  --color-background: var(--beige-light);
-  --color-background-alt: var(--beige-medium);
-  --color-background-dark: var(--black-rich);
-  --color-text: var(--black-rich);
-  --color-text-light: var(--black-slate);
-  --color-text-lighter: rgba(26, 26, 26, 0.7);
-  --color-text-inverse: var(--beige-light);
-  --color-heading: var(--merlot-deep);
-  --color-heading-alt: var(--black-rich);
-  --color-accent: var(--merlot-deep);
-  --color-accent-hover: var(--merlot-classic);
-  --color-accent-light: var(--merlot-rich);
-  --color-border: var(--beige-dark);
-  --color-border-light: rgba(212, 196, 168, 0.5);
-  
-  /* ===== BUTTON COLORS ===== */
-  --btn-primary-bg: var(--merlot-deep);
-  --btn-primary-text: var(--beige-light);
-  --btn-primary-hover: var(--merlot-classic);
-  --btn-primary-active: #5A1720;
-  
-  --btn-secondary-bg: var(--beige-dark);
-  --btn-secondary-text: var(--black-rich);
-  --btn-secondary-hover: var(--beige-medium);
-  --btn-secondary-active: #C4B498;
-  
-  --btn-outline-border: var(--merlot-deep);
-  --btn-outline-text: var(--merlot-deep);
-  --btn-outline-hover-bg: var(--merlot-deep);
-  --btn-outline-hover-text: var(--beige-light);
-  
-  /* ===== LINK COLORS ===== */
-  --link-color: var(--merlot-deep);
-  --link-hover: var(--merlot-classic);
-  --link-visited: var(--merlot-deep);
-  --link-active: var(--merlot-classic);
-  
-  /* ===== FORM COLORS ===== */
-  --input-bg: var(--beige-light);
-  --input-border: var(--beige-dark);
-  --input-border-focus: var(--merlot-deep);
-  --input-text: var(--black-rich);
-  --input-placeholder: var(--black-slate);
-  --input-error: #C41E3A;
-  --input-success: #2D5016;
-  
-  /* ===== OVERLAY & SHADOW COLORS ===== */
-  --overlay-dark: rgba(26, 26, 26, 0.7);
-  --overlay-darker: rgba(26, 26, 26, 0.85);
-  --overlay-merlot: rgba(107, 28, 35, 0.9);
-  --overlay-merlot-light: rgba(107, 28, 35, 0.7);
-  --shadow-sm: 0 2px 4px rgba(26, 26, 26, 0.08);
-  --shadow-md: 0 4px 8px rgba(26, 26, 26, 0.12);
-  --shadow-lg: 0 8px 16px rgba(26, 26, 26, 0.15);
-  --shadow-xl: 0 12px 24px rgba(26, 26, 26, 0.18);
-  
-  /* ===== GRADIENT COLORS ===== */
-  --gradient-merlot: linear-gradient(135deg, var(--merlot-deep) 0%, var(--merlot-classic) 100%);
-  --gradient-merlot-dark: linear-gradient(135deg, var(--merlot-deep) 0%, var(--black-rich) 100%);
-  --gradient-beige: linear-gradient(135deg, var(--beige-light) 0%, var(--beige-medium) 100%);
-  --gradient-overlay: linear-gradient(180deg, transparent 0%, rgba(26, 26, 26, 0.7) 100%);
-}
-
-/* ============================================
-   2. BASE STYLES
-   ============================================ */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-}
-
-body {
-  background-color: var(--color-background);
-  color: var(--color-text);
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+html body {
+  background-color: var(--beige-light);
+  color: var(--black-rich);
+  font-family: var(--font-secondary);
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-::selection {
-  background-color: var(--merlot-deep);
-  color: var(--beige-light);
-}
-
-::-moz-selection {
-  background-color: var(--merlot-deep);
-  color: var(--beige-light);
 }
 
 /* ============================================
-   3. TYPOGRAPHY
+   2. TYPOGRAPHY
    ============================================ */
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-weight: 700;
-  line-height: 1.2;
+html body h1,
+html body h2,
+html body h3 {
+  font-family: var(--font-primary);
+  color: var(--merlot-deep);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
   margin-bottom: 1rem;
-  color: var(--color-heading);
 }
 
-h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  letter-spacing: -0.02em;
+html body h1 {
+  font-size: var(--font-size-3xl);
+  letter-spacing: var(--letter-spacing-tight);
 }
 
-h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  letter-spacing: -0.01em;
+html body h2 {
+  font-size: var(--font-size-2xl);
+  letter-spacing: var(--letter-spacing-tight);
 }
 
-h3 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
+html body h3 {
+  font-size: var(--font-size-xl);
+  letter-spacing: var(--letter-spacing-normal);
 }
 
-h4 {
-  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-  color: var(--color-heading-alt);
+html body h4 {
+  font-size: var(--font-size-lg);
+  color: var(--black-rich);
+  font-weight: var(--font-weight-semibold);
 }
 
-h5 {
-  font-size: clamp(1.125rem, 2vw, 1.25rem);
-  color: var(--color-heading-alt);
+html body h5,
+html body h6 {
+  font-size: var(--font-size-base);
+  color: var(--black-slate);
+  font-weight: var(--font-weight-medium);
 }
 
-h6 {
-  font-size: clamp(1rem, 1.5vw, 1.125rem);
-  color: var(--color-heading-alt);
-}
-
-p {
+html body p {
   margin-bottom: 1rem;
-  font-size: 1rem;
-  line-height: 1.8;
+  color: var(--black-rich);
 }
 
-.lead {
-  font-size: 1.25rem;
-  font-weight: 300;
-  line-height: 1.7;
-  color: var(--color-text-light);
+html body .lead {
+  font-size: var(--font-size-lg);
+  color: var(--black-slate);
+  line-height: var(--line-height-relaxed);
 }
 
-.small-text {
-  font-size: 0.875rem;
-  color: var(--color-text-light);
+html body .text-muted {
+  color: var(--black-slate);
+  opacity: 0.8;
 }
 
-.text-accent {
-  color: var(--color-accent);
-}
-
-.text-muted {
-  color: var(--color-text-lighter);
-}
-
-strong, b {
-  font-weight: 600;
-}
-
-em, i {
-  font-style: italic;
+html body .text-accent {
+  color: var(--merlot-deep);
 }
 
 /* ============================================
-   4. BUTTONS
+   3. BUTTONS
    ============================================ */
 
-.btn {
-  display: inline-block;
-  padding: 12px 32px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  text-align: center;
-  cursor: pointer;
-  border: none;
+html body .btn-primary,
+html body button.btn-primary,
+html body a.btn-primary {
+  background-color: var(--merlot-deep);
+  color: var(--beige-light);
+  border: 2px solid var(--merlot-deep);
+  padding: 0.75rem 2rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
   transition: all 0.3s ease;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.5;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.btn:focus {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
-}
-
-/* Primary Button */
-.btn-primary {
-  background-color: var(--btn-primary-bg);
-  color: var(--btn-primary-text);
-}
-
-.btn-primary:hover {
-  background-color: var(--btn-primary-hover);
+html body .btn-primary:hover,
+html body button.btn-primary:hover,
+html body a.btn-primary:hover {
+  background-color: var(--merlot-classic);
+  border-color: var(--merlot-classic);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(107, 28, 35, 0.3);
 }
 
-.btn-primary:active {
-  background-color: var(--btn-primary-active);
+html body .btn-primary:active,
+html body button.btn-primary:active,
+html body a.btn-primary:active {
+  background-color: #5A1720;
   transform: translateY(0);
 }
 
-/* Secondary Button */
-.btn-secondary {
-  background-color: var(--btn-secondary-bg);
-  color: var(--btn-secondary-text);
-  border: 2px solid var(--color-border);
+html body .btn-secondary,
+html body button.btn-secondary,
+html body a.btn-secondary {
+  background-color: var(--beige-dark);
+  color: var(--black-rich);
+  border: 2px solid var(--beige-dark);
+  padding: 0.75rem 2rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.btn-secondary:hover {
-  background-color: var(--btn-secondary-hover);
+html body .btn-secondary:hover,
+html body button.btn-secondary:hover,
+html body a.btn-secondary:hover {
+  background-color: var(--beige-medium);
   border-color: var(--beige-medium);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 196, 168, 0.3);
 }
 
-.btn-secondary:active {
-  background-color: var(--btn-secondary-active);
-}
-
-/* Outline Button */
-.btn-outline {
+html body .btn-outline,
+html body button.btn-outline,
+html body a.btn-outline {
   background-color: transparent;
-  color: var(--btn-outline-text);
-  border: 2px solid var(--btn-outline-border);
+  color: var(--merlot-deep);
+  border: 2px solid var(--merlot-deep);
+  padding: 0.75rem 2rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.btn-outline:hover {
-  background-color: var(--btn-outline-hover-bg);
-  color: var(--btn-outline-hover-text);
+html body .btn-outline:hover,
+html body button.btn-outline:hover,
+html body a.btn-outline:hover {
+  background-color: var(--merlot-deep);
+  color: var(--beige-light);
 }
 
-/* Outline Light (for dark backgrounds) */
-.btn-outline-light {
+html body .btn-outline-light {
   background-color: transparent;
   color: var(--beige-light);
   border: 2px solid var(--beige-light);
 }
 
-.btn-outline-light:hover {
+html body .btn-outline-light:hover {
   background-color: var(--beige-light);
   color: var(--merlot-deep);
 }
 
-/* Button Sizes */
-.btn-sm {
-  padding: 8px 20px;
-  font-size: 0.875rem;
+html body .btn-lg {
+  padding: 1rem 2.5rem;
+  font-size: var(--font-size-lg);
 }
 
-.btn-lg {
-  padding: 16px 40px;
-  font-size: 1.125rem;
-}
-
-.btn-block {
-  display: block;
-  width: 100%;
-}
-
-/* Button States */
-.btn:disabled,
-.btn.disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  pointer-events: none;
+html body .btn-sm {
+  padding: 0.5rem 1.5rem;
+  font-size: var(--font-size-sm);
 }
 
 /* ============================================
-   5. LINKS
+   4. LINKS
    ============================================ */
 
-a {
-  color: var(--link-color);
+html body a:not(.btn) {
+  color: var(--merlot-deep);
   text-decoration: none;
   transition: color 0.3s ease;
+  position: relative;
 }
 
-a:hover {
-  color: var(--link-hover);
+html body a:not(.btn):hover {
+  color: var(--merlot-classic);
 }
 
-a:visited {
-  color: var(--link-visited);
-}
-
-a:active {
-  color: var(--link-active);
-}
-
-a:focus {
-  outline: 2px solid var(--color-accent);
+html body a:not(.btn):focus {
+  outline: 2px solid var(--merlot-deep);
   outline-offset: 2px;
 }
 
-.link-underline {
-  border-bottom: 1px solid var(--link-color);
+html body .link-underline {
+  border-bottom: 1px solid var(--merlot-deep);
+  padding-bottom: 2px;
 }
 
-.link-underline:hover {
-  border-bottom-color: var(--link-hover);
-}
-
-/* ============================================
-   6. NAVIGATION
-   ============================================ */
-
-.navbar {
-  background-color: var(--beige-light);
-  border-bottom: 1px solid var(--color-border);
-  padding: 1.25rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  transition: all 0.3s ease;
-}
-
-.navbar.scrolled {
-  box-shadow: var(--shadow-md);
-  padding: 0.75rem 0;
-}
-
-.nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--color-heading);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.nav-logo:hover {
-  color: var(--color-accent);
-}
-
-.nav-menu {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  align-items: center;
-}
-
-.nav-link {
-  color: var(--color-text);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.9375rem;
-  transition: color 0.3s ease;
-  position: relative;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--color-accent);
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: var(--color-accent);
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-  width: 100%;
-}
-
-/* Mobile Menu Toggle */
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-}
-
-.nav-toggle span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: var(--color-text);
-  margin: 5px 0;
-  transition: all 0.3s ease;
+html body .link-underline:hover {
+  border-bottom-color: var(--merlot-classic);
 }
 
 /* ============================================
-   7. CARDS & COMPONENTS
+   5. NAVIGATION
    ============================================ */
 
-.card {
+html body .navbar,
+html body header,
+html body nav {
   background-color: var(--beige-light);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
+  border-bottom: 1px solid var(--beige-dark);
 }
 
-.card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-4px);
+html body .nav-link {
+  color: var(--black-rich);
+  font-weight: var(--font-weight-medium);
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
 }
 
-.card-header {
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--color-border-light);
+html body .nav-link:hover {
+  color: var(--merlot-deep);
 }
 
-.card-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-heading);
-  margin-bottom: 0.5rem;
+html body .nav-link.active {
+  color: var(--merlot-deep);
+  font-weight: var(--font-weight-semibold);
 }
 
-.card-body {
-  color: var(--color-text);
+html body .navbar-brand,
+html body .logo {
+  color: var(--merlot-deep);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
 }
 
-.card-footer {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--color-border-light);
-}
+/* ============================================
+   6. CARDS & COMPONENTS
+   ============================================ */
 
-/* Feature Cards */
-.feature-card {
+html body .card {
   background-color: var(--beige-light);
-  padding: 2.5rem 2rem;
+  border: 1px solid var(--beige-dark);
   border-radius: 8px;
-  text-align: center;
-  border: 1px solid var(--color-border);
-  transition: all 0.3s ease;
-}
-
-.feature-card:hover {
-  border-color: var(--color-accent);
-  box-shadow: var(--shadow-lg);
-}
-
-.feature-icon {
-  width: 60px;
-  height: 60px;
-  background-color: var(--merlot-deep);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1.25rem;
-  color: var(--beige-light);
-  font-size: 1.75rem;
-}
-
-/* Testimonial Cards */
-.testimonial-card {
-  background-color: var(--beige-medium);
   padding: 2rem;
-  border-radius: 8px;
-  border-left: 4px solid var(--merlot-deep);
-  position: relative;
+  transition: all 0.3s ease;
 }
 
-.testimonial-quote {
-  font-style: italic;
-  font-size: 1.125rem;
-  line-height: 1.7;
-  color: var(--color-text);
+html body .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(26, 26, 26, 0.15);
+}
+
+html body .card-title {
+  color: var(--merlot-deep);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xl);
+  margin-bottom: 1rem;
+}
+
+html body .card-text {
+  color: var(--black-rich);
+  line-height: var(--line-height-relaxed);
+}
+
+html body .badge {
+  background-color: var(--merlot-deep);
+  color: var(--beige-light);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+html body .badge-secondary {
+  background-color: var(--beige-dark);
+  color: var(--black-rich);
+}
+
+/* ============================================
+   7. SECTIONS & LAYOUTS
+   ============================================ */
+
+html body .hero {
+  background: linear-gradient(135deg, var(--merlot-deep) 0%, var(--merlot-classic) 100%);
+  color: var(--beige-light);
+  padding: 6rem 0;
+  text-align: center;
+}
+
+html body .hero h1 {
+  color: var(--beige-light);
   margin-bottom: 1.5rem;
 }
 
-.testimonial-author {
-  font-weight: 600;
-  color: var(--color-heading);
+html body .hero p {
+  color: var(--beige-light);
+  opacity: 0.95;
+  font-size: var(--font-size-lg);
 }
 
-.testimonial-role {
-  font-size: 0.875rem;
-  color: var(--color-text-light);
+html body .section {
+  padding: 4rem 0;
 }
 
-/* ============================================
-   8. SECTIONS & LAYOUTS
-   ============================================ */
-
-.section {
-  padding: 5rem 0;
+html body .section-alt {
+  background-color: var(--beige-medium);
 }
 
-.section-alt {
-  background-color: var(--color-background-alt);
-}
-
-.section-dark {
-  background-color: var(--color-background-dark);
-  color: var(--color-text-inverse);
-}
-
-.section-dark h1,
-.section-dark h2,
-.section-dark h3,
-.section-dark h4,
-.section-dark h5,
-.section-dark h6 {
+html body .section-dark {
+  background-color: var(--black-rich);
   color: var(--beige-light);
 }
 
-.section-gradient {
-  background: var(--gradient-merlot);
+html body .section-dark h1,
+html body .section-dark h2,
+html body .section-dark h3 {
   color: var(--beige-light);
 }
 
-.section-gradient h1,
-.section-gradient h2,
-.section-gradient h3,
-.section-gradient h4,
-.section-gradient h5,
-.section-gradient h6 {
-  color: var(--beige-light);
+html body .section-dark p {
+  color: var(--beige-medium);
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.container-fluid {
-  width: 100%;
-  padding: 0 20px;
-}
-
-.container-narrow {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Hero Section */
-.hero {
-  background: var(--gradient-merlot);
-  color: var(--beige-light);
-  padding: 8rem 0;
-  text-align: center;
+html body .overlay {
   position: relative;
 }
 
-.hero-overlay {
+html body .overlay::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--overlay-merlot);
+  background: rgba(26, 26, 26, 0.7);
   z-index: 1;
 }
 
-.hero-content {
+html body .overlay > * {
   position: relative;
   z-index: 2;
 }
 
-.hero h1 {
-  color: var(--beige-light);
-  margin-bottom: 1.5rem;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  margin-bottom: 2.5rem;
-  opacity: 0.95;
-}
-
-/* Section Headers */
-.section-header {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.section-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
-  color: var(--color-heading);
-  margin-bottom: 1rem;
-}
-
-.section-subtitle {
-  font-size: 1.125rem;
-  color: var(--color-text-light);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Dividers */
-.divider {
-  height: 2px;
-  background-color: var(--merlot-deep);
-  margin: 3rem 0;
-  opacity: 0.3;
-}
-
-.divider-light {
-  background-color: var(--beige-dark);
-}
-
 /* ============================================
-   9. FORMS
+   8. FORMS
    ============================================ */
 
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: var(--color-text);
-  font-size: 0.9375rem;
-}
-
-.form-control {
-  width: 100%;
+html body .form-control,
+html body input[type="text"],
+html body input[type="email"],
+html body input[type="tel"],
+html body input[type="password"],
+html body textarea,
+html body select {
+  background-color: var(--beige-light);
+  border: 2px solid var(--beige-dark);
+  color: var(--black-rich);
   padding: 0.75rem 1rem;
-  font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
-  color: var(--input-text);
-  background-color: var(--input-bg);
-  border: 2px solid var(--input-border);
   border-radius: 4px;
+  font-size: var(--font-size-base);
   transition: all 0.3s ease;
+  width: 100%;
 }
 
-.form-control:focus {
+html body .form-control:focus,
+html body input[type="text"]:focus,
+html body input[type="email"]:focus,
+html body input[type="tel"]:focus,
+html body input[type="password"]:focus,
+html body textarea:focus,
+html body select:focus {
+  border-color: var(--merlot-deep);
   outline: none;
-  border-color: var(--input-border-focus);
   box-shadow: 0 0 0 3px rgba(107, 28, 35, 0.1);
 }
 
-.form-control::placeholder {
-  color: var(--input-placeholder);
+html body .form-control::placeholder,
+html body input::placeholder,
+html body textarea::placeholder {
+  color: var(--black-slate);
   opacity: 0.7;
 }
 
-textarea.form-control {
-  min-height: 120px;
-  resize: vertical;
+html body .form-label {
+  color: var(--black-rich);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 0.5rem;
+  display: block;
 }
 
-select.form-control {
-  cursor: pointer;
-}
-
-/* Form Validation States */
-.form-control.is-valid {
-  border-color: var(--input-success);
-}
-
-.form-control.is-invalid {
-  border-color: var(--input-error);
-}
-
-.form-feedback {
-  font-size: 0.875rem;
+html body .form-error {
+  color: #C41E3A;
+  font-size: var(--font-size-sm);
   margin-top: 0.25rem;
 }
 
-.form-feedback.valid {
-  color: var(--input-success);
-}
-
-.form-feedback.invalid {
-  color: var(--input-error);
-}
-
-/* Checkbox & Radio */
-.form-check {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.75rem;
-}
-
-.form-check-input {
-  width: 18px;
-  height: 18px;
-  margin-right: 0.5rem;
-  cursor: pointer;
-  accent-color: var(--merlot-deep);
-}
-
-.form-check-label {
-  cursor: pointer;
-  font-size: 0.9375rem;
-  color: var(--color-text);
+html body .form-success {
+  color: #2D5016;
+  font-size: var(--font-size-sm);
+  margin-top: 0.25rem;
 }
 
 /* ============================================
-   10. FOOTER
+   9. FOOTER
    ============================================ */
 
-.footer {
+html body .footer,
+html body footer {
   background-color: var(--black-rich);
   color: var(--beige-light);
-  padding: 4rem 0 2rem;
+  padding: 3rem 0 1.5rem;
 }
 
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
-  margin-bottom: 3rem;
-}
-
-.footer-section h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
+html body .footer h3,
+html body footer h3 {
   color: var(--beige-light);
-  margin-bottom: 1.25rem;
+  font-size: var(--font-size-lg);
+  margin-bottom: 1rem;
 }
 
-.footer-section p,
-.footer-section a {
+html body .footer p,
+html body footer p {
   color: var(--beige-medium);
-  text-decoration: none;
-  display: block;
-  margin-bottom: 0.75rem;
-  transition: color 0.3s ease;
-  font-size: 0.9375rem;
+  line-height: var(--line-height-relaxed);
 }
 
-.footer-section a:hover {
+html body .footer a,
+html body footer a {
+  color: var(--beige-medium);
+  transition: color 0.3s ease;
+}
+
+html body .footer a:hover,
+html body footer a:hover {
   color: var(--merlot-rich);
 }
 
-.footer-bottom {
-  text-align: center;
-  padding-top: 2rem;
+html body .footer-bottom {
   border-top: 1px solid var(--black-slate);
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
   color: var(--beige-medium);
-  font-size: 0.875rem;
-}
-
-.footer-social {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.footer-social a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: var(--black-slate);
-  border-radius: 50%;
-  color: var(--beige-light);
-  transition: all 0.3s ease;
-}
-
-.footer-social a:hover {
-  background-color: var(--merlot-deep);
-  transform: translateY(-3px);
+  font-size: var(--font-size-sm);
 }
 
 /* ============================================
-   11. UTILITY CLASSES
+   10. UTILITY CLASSES
    ============================================ */
 
 /* Background Colors */
-.bg-cream { background-color: var(--beige-light); }
-.bg-sand { background-color: var(--beige-medium); }
-.bg-beige { background-color: var(--beige-dark); }
-.bg-black { background-color: var(--black-rich); }
-.bg-merlot { background-color: var(--merlot-deep); }
-.bg-burgundy { background-color: var(--merlot-classic); }
-.bg-wine { background-color: var(--merlot-rich); }
+html body .bg-beige-light { background-color: var(--beige-light); }
+html body .bg-beige-medium { background-color: var(--beige-medium); }
+html body .bg-beige-dark { background-color: var(--beige-dark); }
+html body .bg-black-rich { background-color: var(--black-rich); }
+html body .bg-merlot-deep { background-color: var(--merlot-deep); }
+html body .bg-merlot-classic { background-color: var(--merlot-classic); }
 
 /* Text Colors */
-.text-cream { color: var(--beige-light); }
-.text-black { color: var(--black-rich); }
-.text-merlot { color: var(--merlot-deep); }
-.text-burgundy { color: var(--merlot-classic); }
-.text-wine { color: var(--merlot-rich); }
+html body .text-beige-light { color: var(--beige-light); }
+html body .text-black-rich { color: var(--black-rich); }
+html body .text-black-slate { color: var(--black-slate); }
+html body .text-merlot-deep { color: var(--merlot-deep); }
+html body .text-merlot-classic { color: var(--merlot-classic); }
 
 /* Border Colors */
-.border-cream { border-color: var(--beige-light); }
-.border-beige { border-color: var(--beige-dark); }
-.border-merlot { border-color: var(--merlot-deep); }
+html body .border-beige { border-color: var(--beige-dark); }
+html body .border-merlot { border-color: var(--merlot-deep); }
+html body .border-black { border-color: var(--black-slate); }
 
 /* Spacing Utilities */
-.mt-1 { margin-top: 0.5rem; }
-.mt-2 { margin-top: 1rem; }
-.mt-3 { margin-top: 1.5rem; }
-.mt-4 { margin-top: 2rem; }
-.mt-5 { margin-top: 3rem; }
+html body .mt-0 { margin-top: 0; }
+html body .mt-1 { margin-top: 0.5rem; }
+html body .mt-2 { margin-top: 1rem; }
+html body .mt-3 { margin-top: 1.5rem; }
+html body .mt-4 { margin-top: 2rem; }
+html body .mt-5 { margin-top: 3rem; }
 
-.mb-1 { margin-bottom: 0.5rem; }
-.mb-2 { margin-bottom: 1rem; }
-.mb-3 { margin-bottom: 1.5rem; }
-.mb-4 { margin-bottom: 2rem; }
-.mb-5 { margin-bottom: 3rem; }
+html body .mb-0 { margin-bottom: 0; }
+html body .mb-1 { margin-bottom: 0.5rem; }
+html body .mb-2 { margin-bottom: 1rem; }
+html body .mb-3 { margin-bottom: 1.5rem; }
+html body .mb-4 { margin-bottom: 2rem; }
+html body .mb-5 { margin-bottom: 3rem; }
 
-.pt-1 { padding-top: 0.5rem; }
-.pt-2 { padding-top: 1rem; }
-.pt-3 { padding-top: 1.5rem; }
-.pt-4 { padding-top: 2rem; }
-.pt-5 { padding-top: 3rem; }
+html body .pt-0 { padding-top: 0; }
+html body .pt-1 { padding-top: 0.5rem; }
+html body .pt-2 { padding-top: 1rem; }
+html body .pt-3 { padding-top: 1.5rem; }
+html body .pt-4 { padding-top: 2rem; }
+html body .pt-5 { padding-top: 3rem; }
 
-.pb-1 { padding-bottom: 0.5rem; }
-.pb-2 { padding-bottom: 1rem; }
-.pb-3 { padding-bottom: 1.5rem; }
-.pb-4 { padding-bottom: 2rem; }
-.pb-5 { padding-bottom: 3rem; }
-
-/* Text Alignment */
-.text-left { text-align: left; }
-.text-center { text-align: center; }
-.text-right { text-align: right; }
+html body .pb-0 { padding-bottom: 0; }
+html body .pb-1 { padding-bottom: 0.5rem; }
+html body .pb-2 { padding-bottom: 1rem; }
+html body .pb-3 { padding-bottom: 1.5rem; }
+html body .pb-4 { padding-bottom: 2rem; }
+html body .pb-5 { padding-bottom: 3rem; }
 
 /* Display Utilities */
-.d-none { display: none; }
-.d-block { display: block; }
-.d-inline { display: inline; }
-.d-inline-block { display: inline-block; }
-.d-flex { display: flex; }
-.d-grid { display: grid; }
+html body .d-none { display: none; }
+html body .d-block { display: block; }
+html body .d-inline { display: inline; }
+html body .d-inline-block { display: inline-block; }
+html body .d-flex { display: flex; }
+html body .d-grid { display: grid; }
 
 /* Flex Utilities */
-.flex-row { flex-direction: row; }
-.flex-column { flex-direction: column; }
-.justify-start { justify-content: flex-start; }
-.justify-center { justify-content: center; }
-.justify-end { justify-content: flex-end; }
-.justify-between { justify-content: space-between; }
-.align-start { align-items: flex-start; }
-.align-center { align-items: center; }
-.align-end { align-items: flex-end; }
+html body .flex-row { flex-direction: row; }
+html body .flex-column { flex-direction: column; }
+html body .justify-start { justify-content: flex-start; }
+html body .justify-center { justify-content: center; }
+html body .justify-end { justify-content: flex-end; }
+html body .justify-between { justify-content: space-between; }
+html body .align-start { align-items: flex-start; }
+html body .align-center { align-items: center; }
+html body .align-end { align-items: flex-end; }
 
 /* Grid Utilities */
-.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+html body .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+html body .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+html body .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
 
 /* Shadow Utilities */
-.shadow-sm { box-shadow: var(--shadow-sm); }
-.shadow-md { box-shadow: var(--shadow-md); }
-.shadow-lg { box-shadow: var(--shadow-lg); }
-.shadow-xl { box-shadow: var(--shadow-xl); }
+html body .shadow-sm { box-shadow: 0 2px 4px rgba(26, 26, 26, 0.08); }
+html body .shadow-md { box-shadow: 0 4px 8px rgba(26, 26, 26, 0.12); }
+html body .shadow-lg { box-shadow: 0 8px 16px rgba(26, 26, 26, 0.15); }
+html body .shadow-xl { box-shadow: 0 12px 24px rgba(26, 26, 26, 0.18); }
 
 /* Border Radius */
-.rounded { border-radius: 4px; }
-.rounded-lg { border-radius: 8px; }
-.rounded-full { border-radius: 9999px; }
+html body .rounded { border-radius: 4px; }
+html body .rounded-lg { border-radius: 8px; }
+html body .rounded-full { border-radius: 9999px; }
 
 /* ============================================
-   12. RESPONSIVE OVERRIDES
+   11. RESPONSIVE OVERRIDES
    ============================================ */
 
 @media (max-width: 1024px) {
-  .grid-4 {
+  html body .grid-4 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -942,23 +583,23 @@ select.form-control {
     font-size: 15px;
   }
 
-  .section {
+  html body .section {
     padding: 3rem 0;
   }
 
-  .hero {
+  html body .hero {
     padding: 5rem 0;
   }
 
-  .nav-menu {
+  html body .nav-menu {
     display: none;
   }
 
-  .nav-toggle {
+  html body .nav-toggle {
     display: block;
   }
 
-  .nav-menu.active {
+  html body .nav-menu.active {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -967,22 +608,22 @@ select.form-control {
     right: 0;
     background-color: var(--beige-light);
     padding: 1rem;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 8px 16px rgba(26, 26, 26, 0.15);
     gap: 0;
   }
 
-  .nav-link {
+  html body .nav-link {
     padding: 1rem;
-    border-bottom: 1px solid var(--color-border-light);
+    border-bottom: 1px solid rgba(212, 196, 168, 0.5);
   }
 
-  .grid-2,
-  .grid-3,
-  .grid-4 {
+  html body .grid-2,
+  html body .grid-3,
+  html body .grid-4 {
     grid-template-columns: 1fr;
   }
 
-  .footer-content {
+  html body .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
@@ -993,103 +634,45 @@ select.form-control {
     font-size: 14px;
   }
 
-  .container,
-  .container-narrow {
+  html body .container,
+  html body .container-narrow {
     padding: 0 15px;
   }
 
-  .btn {
+  html body .btn {
     padding: 10px 24px;
     font-size: 0.9375rem;
   }
 
-  .btn-lg {
+  html body .btn-lg {
     padding: 14px 32px;
     font-size: 1rem;
   }
 }
 
 /* ============================================
-   PRINT STYLES
+   12. PRINT STYLES
    ============================================ */
 
 @media print {
-  body {
+  html body {
     background-color: white;
     color: black;
   }
 
-  .navbar,
-  .footer,
-  .btn,
-  .nav-toggle {
+  html body .navbar,
+  html body .footer,
+  html body .btn,
+  html body .nav-toggle {
     display: none;
   }
 
-  a {
+  html body a {
     color: black;
     text-decoration: underline;
   }
 
-  .section {
+  html body .section {
     page-break-inside: avoid;
   }
-}
-
-/* ============================================
-   CRITICAL OVERRIDES
-   Force new color palette to take precedence
-   ============================================ */
-
-body {
-  background-color: var(--beige-light) !important;
-  color: var(--black-rich) !important;
-}
-
-h1, h2, h3 {
-  color: var(--merlot-deep) !important;
-}
-
-.btn-primary,
-button.btn-primary,
-a.btn-primary {
-  background-color: var(--merlot-deep) !important;
-  color: var(--beige-light) !important;
-  border-color: var(--merlot-deep) !important;
-}
-
-.btn-primary:hover,
-button.btn-primary:hover,
-a.btn-primary:hover {
-  background-color: var(--merlot-classic) !important;
-}
-
-a:not(.btn) {
-  color: var(--merlot-deep) !important;
-}
-
-a:not(.btn):hover {
-  color: var(--merlot-classic) !important;
-}
-
-.navbar,
-header {
-  background-color: var(--beige-light) !important;
-  border-bottom-color: var(--beige-dark) !important;
-}
-
-.footer,
-footer {
-  background-color: var(--black-rich) !important;
-  color: var(--beige-light) !important;
-}
-
-.footer a,
-footer a {
-  color: var(--beige-medium) !important;
-}
-
-.footer a:hover,
-footer a:hover {
-  color: var(--merlot-rich) !important;
 }
