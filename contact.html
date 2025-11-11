@@ -155,7 +155,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </h3>
                         
                         <form id="contact-form" action="https://formspree.io/f/xblqjywk" method="POST">
-                            <input type="hidden" name="form-name" value="contact">
+                            <input type="hidden" name="_subject" value="New Contact Form Submission - HCJK Photography">
+                            <input type="hidden" name="_next" value="https://hcjk.org/contact.html?success=true">
                             
                             <div class="form-group">
                                 <label for="name" class="form-label">Your Name *</label>
@@ -494,9 +495,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <script>
         // Form submission handling
+        // Check if form was successfully submitted (redirected back from Formspree)
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            document.getElementById('form-success').style.display = 'block';
+            document.getElementById('form-success').textContent = 'Thank you for your message! I\'ll get back to you within 24-48 hours.';
+            // Remove success parameter from URL
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+
         document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
             // Basic form validation
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
@@ -504,18 +512,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             const message = document.getElementById('message').value;
             
             if (!name || !email || !inquiryType || !message) {
+                e.preventDefault();
                 document.getElementById('form-error').style.display = 'block';
                 document.getElementById('form-error').textContent = 'Please fill in all required fields.';
                 return;
             }
             
-            // If using Netlify Forms, the form will submit automatically
-            // Otherwise, you can add AJAX submission here
-            
-            // Show success message
-            document.getElementById('form-success').style.display = 'block';
+            // Hide any previous error messages
             document.getElementById('form-error').style.display = 'none';
-            this.reset();
             
             // Track form submission in analytics
             if (typeof gtag !== 'undefined') {
@@ -524,6 +528,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     'event_label': inquiryType
                 });
             }
+            
+            // Allow form to submit to Formspree
+            // Formspree will handle the redirect and success message
         });
     </script>
     <script src="assets/js/enhancements.js" defer></script>
