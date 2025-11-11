@@ -1035,3 +1035,61 @@ select.form-control {
     page-break-inside: avoid;
   }
 }
+
+/* ============================================
+   CRITICAL OVERRIDES
+   Force new color palette to take precedence
+   ============================================ */
+
+body {
+  background-color: var(--beige-light) !important;
+  color: var(--black-rich) !important;
+}
+
+h1, h2, h3 {
+  color: var(--merlot-deep) !important;
+}
+
+.btn-primary,
+button.btn-primary,
+a.btn-primary {
+  background-color: var(--merlot-deep) !important;
+  color: var(--beige-light) !important;
+  border-color: var(--merlot-deep) !important;
+}
+
+.btn-primary:hover,
+button.btn-primary:hover,
+a.btn-primary:hover {
+  background-color: var(--merlot-classic) !important;
+}
+
+a:not(.btn) {
+  color: var(--merlot-deep) !important;
+}
+
+a:not(.btn):hover {
+  color: var(--merlot-classic) !important;
+}
+
+.navbar,
+header {
+  background-color: var(--beige-light) !important;
+  border-bottom-color: var(--beige-dark) !important;
+}
+
+.footer,
+footer {
+  background-color: var(--black-rich) !important;
+  color: var(--beige-light) !important;
+}
+
+.footer a,
+footer a {
+  color: var(--beige-medium) !important;
+}
+
+.footer a:hover,
+footer a:hover {
+  color: var(--merlot-rich) !important;
+}
