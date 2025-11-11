@@ -7,7 +7,7 @@
     <!-- Primary Meta Tags -->
     <title>Contact | HCJK Collection - Get in Touch</title>
     <meta name="title" content="Contact | HCJK Collection - Get in Touch">
-    <meta name="description" content="Contact HCJK Collection for photography inquiries, bookings, and collaborations. We'd love to hear from you and discuss your photography needs.">
+    <meta name="description" content="Get in touch with HCJK Collection for photography inquiries, bookings, and collaborations. Professional photography services available.">
     <meta name="keywords" content="contact photographer, photography inquiry, book photographer, photography consultation">
     <meta name="author" content="HCJK Collection">
     <meta name="robots" content="index, follow">
@@ -28,7 +28,7 @@
     <meta property="twitter:image" content="https://www.hcjk.org/assets/images/twitter-image.jpg">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+    
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/variables.css">
@@ -54,6 +54,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MQZN2L9R');</script>
 <!-- End Google Tag Manager -->
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/images/logo/favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -67,7 +74,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <nav class="navbar" id="navbar">
         <div class="navbar-container">
             <a href="index.html" class="navbar-brand">
-                <img src="assets/images/logo/logo.png" alt="HCJK Collection Logo" width="120" height="40">
+                <picture>
+        <source srcset="assets/images/logo/logo.webp" type="image/webp">
+        <img src="assets/images/logo/logo.png" alt="HCJK Collection Logo" width="120" height="40" loading="lazy">
+    </picture>
             </a>
             
             <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation menu">
@@ -104,9 +114,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Hero Section -->
         <section class="hero" style="min-height: 50vh;">
             <div class="hero-background">
-                <img src="assets/images/contact/contact-1.jpg" 
+                <picture>
+        <source srcset="assets/images/contact/contact-1.webp" type="image/webp">
+        <img src="assets/images/contact/contact-1.jpg" 
                      alt="Contact us" 
                      loading="eager">
+    </picture>
             </div>
             <div class="hero-overlay"></div>
             <div class="hero-content">
@@ -126,7 +139,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             I'd Love to Hear From You
                         </h3>
                         
-                        <form id="contact-form" data-netlify="true" name="contact">
+                        <form id="contact-form" action="https://formspree.io/f/xblqjywk" method="POST">
                             <input type="hidden" name="form-name" value="contact">
                             
                             <div class="form-group">
