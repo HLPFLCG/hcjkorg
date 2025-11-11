@@ -1,0 +1,678 @@
+/* ============================================
+   HCJK Photography - Complete Color Palette CSS
+   Beige, Black, Merlot Theme
+   Version: 2.0.0 - Refactored
+   Last Updated: 2024
+   
+   CHANGES IN V2.0:
+   - Removed duplicate color variable definitions
+   - Removed !important declarations
+   - Improved CSS specificity
+   - Better organized structure
+   ============================================ */
+
+/* ============================================
+   TABLE OF CONTENTS
+   1. Base Styles
+   2. Typography
+   3. Buttons
+   4. Links
+   5. Navigation
+   6. Cards & Components
+   7. Sections & Layouts
+   8. Forms
+   9. Footer
+   10. Utility Classes
+   11. Responsive Overrides
+   12. Print Styles
+   ============================================ */
+
+/* ============================================
+   1. BASE STYLES
+   ============================================ */
+
+html body {
+  background-color: var(--beige-light);
+  color: var(--black-rich);
+  font-family: var(--font-secondary);
+  line-height: 1.6;
+}
+
+/* ============================================
+   2. TYPOGRAPHY
+   ============================================ */
+
+html body h1,
+html body h2,
+html body h3 {
+  font-family: var(--font-primary);
+  color: var(--merlot-deep);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-bottom: 1rem;
+}
+
+html body h1 {
+  font-size: var(--font-size-3xl);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+html body h2 {
+  font-size: var(--font-size-2xl);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+html body h3 {
+  font-size: var(--font-size-xl);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+html body h4 {
+  font-size: var(--font-size-lg);
+  color: var(--black-rich);
+  font-weight: var(--font-weight-semibold);
+}
+
+html body h5,
+html body h6 {
+  font-size: var(--font-size-base);
+  color: var(--black-slate);
+  font-weight: var(--font-weight-medium);
+}
+
+html body p {
+  margin-bottom: 1rem;
+  color: var(--black-rich);
+}
+
+html body .lead {
+  font-size: var(--font-size-lg);
+  color: var(--black-slate);
+  line-height: var(--line-height-relaxed);
+}
+
+html body .text-muted {
+  color: var(--black-slate);
+  opacity: 0.8;
+}
+
+html body .text-accent {
+  color: var(--merlot-deep);
+}
+
+/* ============================================
+   3. BUTTONS
+   ============================================ */
+
+html body .btn-primary,
+html body button.btn-primary,
+html body a.btn-primary {
+  background-color: var(--merlot-deep);
+  color: var(--beige-light);
+  border: 2px solid var(--merlot-deep);
+  padding: 0.75rem 2rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+html body .btn-primary:hover,
+html body button.btn-primary:hover,
+html body a.btn-primary:hover {
+  background-color: var(--merlot-classic);
+  border-color: var(--merlot-classic);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(107, 28, 35, 0.3);
+}
+
+html body .btn-primary:active,
+html body button.btn-primary:active,
+html body a.btn-primary:active {
+  background-color: #5A1720;
+  transform: translateY(0);
+}
+
+html body .btn-secondary,
+html body button.btn-secondary,
+html body a.btn-secondary {
+  background-color: var(--beige-dark);
+  color: var(--black-rich);
+  border: 2px solid var(--beige-dark);
+  padding: 0.75rem 2rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+html body .btn-secondary:hover,
+html body button.btn-secondary:hover,
+html body a.btn-secondary:hover {
+  background-color: var(--beige-medium);
+  border-color: var(--beige-medium);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 196, 168, 0.3);
+}
+
+html body .btn-outline,
+html body button.btn-outline,
+html body a.btn-outline {
+  background-color: transparent;
+  color: var(--merlot-deep);
+  border: 2px solid var(--merlot-deep);
+  padding: 0.75rem 2rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+html body .btn-outline:hover,
+html body button.btn-outline:hover,
+html body a.btn-outline:hover {
+  background-color: var(--merlot-deep);
+  color: var(--beige-light);
+}
+
+html body .btn-outline-light {
+  background-color: transparent;
+  color: var(--beige-light);
+  border: 2px solid var(--beige-light);
+}
+
+html body .btn-outline-light:hover {
+  background-color: var(--beige-light);
+  color: var(--merlot-deep);
+}
+
+html body .btn-lg {
+  padding: 1rem 2.5rem;
+  font-size: var(--font-size-lg);
+}
+
+html body .btn-sm {
+  padding: 0.5rem 1.5rem;
+  font-size: var(--font-size-sm);
+}
+
+/* ============================================
+   4. LINKS
+   ============================================ */
+
+html body a:not(.btn) {
+  color: var(--merlot-deep);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+html body a:not(.btn):hover {
+  color: var(--merlot-classic);
+}
+
+html body a:not(.btn):focus {
+  outline: 2px solid var(--merlot-deep);
+  outline-offset: 2px;
+}
+
+html body .link-underline {
+  border-bottom: 1px solid var(--merlot-deep);
+  padding-bottom: 2px;
+}
+
+html body .link-underline:hover {
+  border-bottom-color: var(--merlot-classic);
+}
+
+/* ============================================
+   5. NAVIGATION
+   ============================================ */
+
+html body .navbar,
+html body header,
+html body nav {
+  background-color: var(--beige-light);
+  border-bottom: 1px solid var(--beige-dark);
+}
+
+html body .nav-link {
+  color: var(--black-rich);
+  font-weight: var(--font-weight-medium);
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+html body .nav-link:hover {
+  color: var(--merlot-deep);
+}
+
+html body .nav-link.active {
+  color: var(--merlot-deep);
+  font-weight: var(--font-weight-semibold);
+}
+
+html body .navbar-brand,
+html body .logo {
+  color: var(--merlot-deep);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+}
+
+/* ============================================
+   6. CARDS & COMPONENTS
+   ============================================ */
+
+html body .card {
+  background-color: var(--beige-light);
+  border: 1px solid var(--beige-dark);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+html body .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(26, 26, 26, 0.15);
+}
+
+html body .card-title {
+  color: var(--merlot-deep);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xl);
+  margin-bottom: 1rem;
+}
+
+html body .card-text {
+  color: var(--black-rich);
+  line-height: var(--line-height-relaxed);
+}
+
+html body .badge {
+  background-color: var(--merlot-deep);
+  color: var(--beige-light);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+html body .badge-secondary {
+  background-color: var(--beige-dark);
+  color: var(--black-rich);
+}
+
+/* ============================================
+   7. SECTIONS & LAYOUTS
+   ============================================ */
+
+html body .hero {
+  background: linear-gradient(135deg, var(--merlot-deep) 0%, var(--merlot-classic) 100%);
+  color: var(--beige-light);
+  padding: 6rem 0;
+  text-align: center;
+}
+
+html body .hero h1 {
+  color: var(--beige-light);
+  margin-bottom: 1.5rem;
+}
+
+html body .hero p {
+  color: var(--beige-light);
+  opacity: 0.95;
+  font-size: var(--font-size-lg);
+}
+
+html body .section {
+  padding: 4rem 0;
+}
+
+html body .section-alt {
+  background-color: var(--beige-medium);
+}
+
+html body .section-dark {
+  background-color: var(--black-rich);
+  color: var(--beige-light);
+}
+
+html body .section-dark h1,
+html body .section-dark h2,
+html body .section-dark h3 {
+  color: var(--beige-light);
+}
+
+html body .section-dark p {
+  color: var(--beige-medium);
+}
+
+html body .overlay {
+  position: relative;
+}
+
+html body .overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 26, 26, 0.7);
+  z-index: 1;
+}
+
+html body .overlay > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ============================================
+   8. FORMS
+   ============================================ */
+
+html body .form-control,
+html body input[type="text"],
+html body input[type="email"],
+html body input[type="tel"],
+html body input[type="password"],
+html body textarea,
+html body select {
+  background-color: var(--beige-light);
+  border: 2px solid var(--beige-dark);
+  color: var(--black-rich);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-size: var(--font-size-base);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+html body .form-control:focus,
+html body input[type="text"]:focus,
+html body input[type="email"]:focus,
+html body input[type="tel"]:focus,
+html body input[type="password"]:focus,
+html body textarea:focus,
+html body select:focus {
+  border-color: var(--merlot-deep);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(107, 28, 35, 0.1);
+}
+
+html body .form-control::placeholder,
+html body input::placeholder,
+html body textarea::placeholder {
+  color: var(--black-slate);
+  opacity: 0.7;
+}
+
+html body .form-label {
+  color: var(--black-rich);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+html body .form-error {
+  color: #C41E3A;
+  font-size: var(--font-size-sm);
+  margin-top: 0.25rem;
+}
+
+html body .form-success {
+  color: #2D5016;
+  font-size: var(--font-size-sm);
+  margin-top: 0.25rem;
+}
+
+/* ============================================
+   9. FOOTER
+   ============================================ */
+
+html body .footer,
+html body footer {
+  background-color: var(--black-rich);
+  color: var(--beige-light);
+  padding: 3rem 0 1.5rem;
+}
+
+html body .footer h3,
+html body footer h3 {
+  color: var(--beige-light);
+  font-size: var(--font-size-lg);
+  margin-bottom: 1rem;
+}
+
+html body .footer p,
+html body footer p {
+  color: var(--beige-medium);
+  line-height: var(--line-height-relaxed);
+}
+
+html body .footer a,
+html body footer a {
+  color: var(--beige-medium);
+  transition: color 0.3s ease;
+}
+
+html body .footer a:hover,
+html body footer a:hover {
+  color: var(--merlot-rich);
+}
+
+html body .footer-bottom {
+  border-top: 1px solid var(--black-slate);
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--beige-medium);
+  font-size: var(--font-size-sm);
+}
+
+/* ============================================
+   10. UTILITY CLASSES
+   ============================================ */
+
+/* Background Colors */
+html body .bg-beige-light { background-color: var(--beige-light); }
+html body .bg-beige-medium { background-color: var(--beige-medium); }
+html body .bg-beige-dark { background-color: var(--beige-dark); }
+html body .bg-black-rich { background-color: var(--black-rich); }
+html body .bg-merlot-deep { background-color: var(--merlot-deep); }
+html body .bg-merlot-classic { background-color: var(--merlot-classic); }
+
+/* Text Colors */
+html body .text-beige-light { color: var(--beige-light); }
+html body .text-black-rich { color: var(--black-rich); }
+html body .text-black-slate { color: var(--black-slate); }
+html body .text-merlot-deep { color: var(--merlot-deep); }
+html body .text-merlot-classic { color: var(--merlot-classic); }
+
+/* Border Colors */
+html body .border-beige { border-color: var(--beige-dark); }
+html body .border-merlot { border-color: var(--merlot-deep); }
+html body .border-black { border-color: var(--black-slate); }
+
+/* Spacing Utilities */
+html body .mt-0 { margin-top: 0; }
+html body .mt-1 { margin-top: 0.5rem; }
+html body .mt-2 { margin-top: 1rem; }
+html body .mt-3 { margin-top: 1.5rem; }
+html body .mt-4 { margin-top: 2rem; }
+html body .mt-5 { margin-top: 3rem; }
+
+html body .mb-0 { margin-bottom: 0; }
+html body .mb-1 { margin-bottom: 0.5rem; }
+html body .mb-2 { margin-bottom: 1rem; }
+html body .mb-3 { margin-bottom: 1.5rem; }
+html body .mb-4 { margin-bottom: 2rem; }
+html body .mb-5 { margin-bottom: 3rem; }
+
+html body .pt-0 { padding-top: 0; }
+html body .pt-1 { padding-top: 0.5rem; }
+html body .pt-2 { padding-top: 1rem; }
+html body .pt-3 { padding-top: 1.5rem; }
+html body .pt-4 { padding-top: 2rem; }
+html body .pt-5 { padding-top: 3rem; }
+
+html body .pb-0 { padding-bottom: 0; }
+html body .pb-1 { padding-bottom: 0.5rem; }
+html body .pb-2 { padding-bottom: 1rem; }
+html body .pb-3 { padding-bottom: 1.5rem; }
+html body .pb-4 { padding-bottom: 2rem; }
+html body .pb-5 { padding-bottom: 3rem; }
+
+/* Display Utilities */
+html body .d-none { display: none; }
+html body .d-block { display: block; }
+html body .d-inline { display: inline; }
+html body .d-inline-block { display: inline-block; }
+html body .d-flex { display: flex; }
+html body .d-grid { display: grid; }
+
+/* Flex Utilities */
+html body .flex-row { flex-direction: row; }
+html body .flex-column { flex-direction: column; }
+html body .justify-start { justify-content: flex-start; }
+html body .justify-center { justify-content: center; }
+html body .justify-end { justify-content: flex-end; }
+html body .justify-between { justify-content: space-between; }
+html body .align-start { align-items: flex-start; }
+html body .align-center { align-items: center; }
+html body .align-end { align-items: flex-end; }
+
+/* Grid Utilities */
+html body .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+html body .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+html body .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+
+/* Shadow Utilities */
+html body .shadow-sm { box-shadow: 0 2px 4px rgba(26, 26, 26, 0.08); }
+html body .shadow-md { box-shadow: 0 4px 8px rgba(26, 26, 26, 0.12); }
+html body .shadow-lg { box-shadow: 0 8px 16px rgba(26, 26, 26, 0.15); }
+html body .shadow-xl { box-shadow: 0 12px 24px rgba(26, 26, 26, 0.18); }
+
+/* Border Radius */
+html body .rounded { border-radius: 4px; }
+html body .rounded-lg { border-radius: 8px; }
+html body .rounded-full { border-radius: 9999px; }
+
+/* ============================================
+   11. RESPONSIVE OVERRIDES
+   ============================================ */
+
+@media (max-width: 1024px) {
+  html body .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  html body .section {
+    padding: 3rem 0;
+  }
+
+  html body .hero {
+    padding: 5rem 0;
+  }
+
+  html body .nav-menu {
+    display: none;
+  }
+
+  html body .nav-toggle {
+    display: block;
+  }
+
+  html body .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--beige-light);
+    padding: 1rem;
+    box-shadow: 0 8px 16px rgba(26, 26, 26, 0.15);
+    gap: 0;
+  }
+
+  html body .nav-link {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(212, 196, 168, 0.5);
+  }
+
+  html body .grid-2,
+  html body .grid-3,
+  html body .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  html body .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  html body .container,
+  html body .container-narrow {
+    padding: 0 15px;
+  }
+
+  html body .btn {
+    padding: 10px 24px;
+    font-size: 0.9375rem;
+  }
+
+  html body .btn-lg {
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+}
+
+/* ============================================
+   12. PRINT STYLES
+   ============================================ */
+
+@media print {
+  html body {
+    background-color: white;
+    color: black;
+  }
+
+  html body .navbar,
+  html body .footer,
+  html body .btn,
+  html body .nav-toggle {
+    display: none;
+  }
+
+  html body a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  html body .section {
+    page-break-inside: avoid;
+  }
+}
