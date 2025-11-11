@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5XZJTGSLJP"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-5XZJTGSLJP');
-    </script>
-    
     <meta charset="UTF-8">
+    <!-- Resource Hints -->
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
     <title>Portfolio | HCJK Collection - Professional Photography Gallery</title>
     <meta name="title" content="Portfolio | HCJK Collection - Professional Photography Gallery">
-    <meta name="description" content="Browse HCJK Collection's portfolio of wedding, portrait, landscape, and cityscape photography. View our best work and get inspired for your next photography session.">
+    <meta name="description" content="View our stunning photography portfolio featuring landscapes, urban scenes, nature, coastal photography, and travel images. Professional photography by HCJK Collection.">
     <meta name="keywords" content="photography portfolio, wedding photos, portrait gallery, landscape photography, professional photographer work">
     <meta name="author" content="HCJK Collection">
     <meta name="robots" content="index, follow">
@@ -28,17 +22,17 @@
     <meta property="og:url" content="https://www.hcjk.org/portfolio.html">
     <meta property="og:title" content="Portfolio | HCJK Collection - Professional Photography Gallery">
     <meta property="og:description" content="Browse HCJK Collection's portfolio of wedding, portrait, and landscape photography.">
-    <meta property="og:image" content="https://www.hcjk.org/assets/images/logo/HH-4.png">
+    <meta property="og:image" content="https://www.hcjk.org/assets/images/portfolio/featured.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.hcjk.org/portfolio.html">
     <meta property="twitter:title" content="Portfolio | HCJK Collection - Professional Photography Gallery">
     <meta property="twitter:description" content="Browse HCJK Collection's portfolio of wedding, portrait, and landscape photography.">
-    <meta property="twitter:image" content="https://www.hcjk.org/assets/images/logo/HH-4.png">
+    <meta property="twitter:image" content="https://www.hcjk.org/assets/images/portfolio/featured.jpg">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/logo/HH-4.png">
+    
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/variables.css">
@@ -47,10 +41,51 @@
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/color-palette.css">
+    <link rel="stylesheet" href="assets/css/enhancements.css">
     
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MQZN2L9R');</script>
+<!-- End Google Tag Manager -->
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/images/logo/favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": "HCJK Photography Portfolio",
+        "description": "A curated collection of professional photography showcasing diverse styles and subjects.",
+        "url": "https://hcjk.org/portfolio.html",
+        "creator": {
+            "@type": "Person",
+            "name": "HCJK"
+        }
+    }
+    </script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQZN2L9R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
     <!-- Skip to Content -->
     <a href="#main-content" class="skip-to-content">Skip to main content</a>
     
@@ -58,7 +93,10 @@
     <nav class="navbar" id="navbar">
         <div class="navbar-container">
             <a href="index.html" class="navbar-brand">
-                <img src="assets/images/logo/HH-4.png" alt="HCJK Collection Logo" width="120" height="40">
+                <picture>
+        <source srcset="assets/images/logo/logo.webp" type="image/webp">
+        <img src="assets/images/logo/logo.png" alt="HCJK Collection Logo" width="120" height="40" loading="lazy">
+    </picture>
             </a>
             
             <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation menu">
@@ -95,9 +133,12 @@
         <!-- Hero Section -->
         <section class="hero" style="min-height: 50vh;">
             <div class="hero-background">
-                <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1920&q=80" 
+                <picture>
+        <source srcset="assets/images/portfolio/portfolio-1.webp" type="image/webp">
+        <img src="assets/images/portfolio/portfolio-1.jpg" 
                      alt="Photography portfolio" 
                      loading="eager">
+    </picture>
             </div>
             <div class="hero-overlay"></div>
             <div class="hero-content">
@@ -127,9 +168,12 @@
                 <div class="gallery-masonry" id="portfolio-gallery">
                     <!-- Weddings -->
                     <div class="gallery-item" data-category="weddings">
-                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" 
+                        <picture>
+        <source srcset="assets/images/portfolio/portfolio-2.webp" type="image/webp">
+        <img src="assets/images/portfolio/portfolio-2.jpg" 
                              alt="Elegant wedding ceremony" 
                              loading="lazy">
+    </picture>
                         <div class="gallery-item-overlay">
                             <h3 class="gallery-item-title">Elegant Ceremony</h3>
                             <p class="gallery-item-category">Weddings</p>
@@ -137,9 +181,12 @@
                     </div>
                     
                     <div class="gallery-item" data-category="weddings">
-                        <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800&q=80" 
+                        <picture>
+        <source srcset="assets/images/portfolio/portfolio-3.webp" type="image/webp">
+        <img src="assets/images/portfolio/portfolio-3.jpg" 
                              alt="Wedding couple portrait" 
                              loading="lazy">
+    </picture>
                         <div class="gallery-item-overlay">
                             <h3 class="gallery-item-title">Romantic Moment</h3>
                             <p class="gallery-item-category">Weddings</p>
@@ -147,9 +194,12 @@
                     </div>
                     
                     <div class="gallery-item" data-category="weddings">
-                        <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80" 
+                        <picture>
+        <source srcset="assets/images/portfolio/portfolio-4.webp" type="image/webp">
+        <img src="assets/images/portfolio/portfolio-4.jpg" 
                              alt="Wedding reception" 
                              loading="lazy">
+    </picture>
                         <div class="gallery-item-overlay">
                             <h3 class="gallery-item-title">Celebration</h3>
                             <p class="gallery-item-category">Weddings</p>
@@ -158,9 +208,12 @@
                     
                     <!-- Portraits -->
                     <div class="gallery-item" data-category="portraits">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80" 
+                        <picture>
+        <source srcset="assets/images/portfolio/portfolio-5.webp" type="image/webp">
+        <img src="assets/images/portfolio/portfolio-5.jpg" 
                              alt="Portrait photography" 
                              loading="lazy">
+    </picture>
                         <div class="gallery-item-overlay">
                             <h3 class="gallery-item-title">Natural Beauty</h3>
                             <p class="gallery-item-category">Portraits</p>
@@ -168,9 +221,12 @@
                     </div>
                     
                     <div class="gallery-item" data-category="portraits">
-                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80" 
+                        <picture>
+        <source srcset="assets/images/portfolio/portfolio-6.webp" type="image/webp">
+        <img src="assets/images/portfolio/portfolio-6.jpg" 
                              alt="Family portrait" 
                              loading="lazy">
+    </picture>
                         <div class="gallery-item-overlay">
                             <h3 class="gallery-item-title">Family Love</h3>
                             <p class="gallery-item-category">Portraits</p>
@@ -178,9 +234,12 @@
                     </div>
                     
                     <div class="gallery-item" data-category="portraits">
-                        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80" 
+                        <picture>
+        <source srcset="assets/images/portfolio/portfolio-7.webp" type="image/webp">
+        <img src="assets/images/portfolio/portfolio-7.jpg" 
                              alt="Professional portrait" 
                              loading="lazy">
+    </picture>
                         <div class="gallery-item-overlay">
                             <h3 class="gallery-item-title">Professional</h3>
                             <p class="gallery-item-category">Portraits</p>
@@ -189,9 +248,12 @@
                     
                     <!-- Landscapes -->
                     <div class="gallery-item" data-category="landscapes">
-                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" 
+                        <picture>
+        <source srcset="assets/images/portfolio/portfolio-8.webp" type="image/webp">
+        <img src="assets/images/portfolio/portfolio-8.jpg" 
                              alt="Mountain landscape" 
                              loading="lazy">
+    </picture>
                         <div class="gallery-item-overlay">
                             <h3 class="gallery-item-title">Mountain Vista</h3>
                             <p class="gallery-item-category">Landscapes</p>
@@ -199,9 +261,12 @@
                     </div>
                     
                     <div class="gallery-item" data-category="landscapes">
-                        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80" 
+                        <picture>
+        <source srcset="assets/images/portfolio/portfolio-9.webp" type="image/webp">
+        <img src="assets/images/portfolio/portfolio-9.jpg" 
                              alt="Nature landscape" 
                              loading="lazy">
+    </picture>
                         <div class="gallery-item-overlay">
                             <h3 class="gallery-item-title">Misty Forest</h3>
                             <p class="gallery-item-category">Landscapes</p>
@@ -209,9 +274,12 @@
                     </div>
                     
                     <div class="gallery-item" data-category="landscapes">
-                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80" 
+                        <picture>
+        <source srcset="assets/images/portfolio/portfolio-10.webp" type="image/webp">
+        <img src="assets/images/portfolio/portfolio-10.jpg" 
                              alt="Coastal landscape" 
                              loading="lazy">
+    </picture>
                         <div class="gallery-item-overlay">
                             <h3 class="gallery-item-title">Coastal Beauty</h3>
                             <p class="gallery-item-category">Landscapes</p>
@@ -220,9 +288,12 @@
                     
                     <!-- Cityscapes -->
                     <div class="gallery-item" data-category="cityscapes">
-                        <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80" 
+                        <picture>
+        <source srcset="assets/images/portfolio/portfolio-11.webp" type="image/webp">
+        <img src="assets/images/portfolio/portfolio-11.jpg" 
                              alt="City skyline" 
                              loading="lazy">
+    </picture>
                         <div class="gallery-item-overlay">
                             <h3 class="gallery-item-title">Urban Sunset</h3>
                             <p class="gallery-item-category">Cityscapes</p>
@@ -230,9 +301,12 @@
                     </div>
                     
                     <div class="gallery-item" data-category="cityscapes">
-                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80" 
+                        <picture>
+        <source srcset="assets/images/portfolio/portfolio-12.webp" type="image/webp">
+        <img src="assets/images/portfolio/portfolio-12.jpg" 
                              alt="City architecture" 
                              loading="lazy">
+    </picture>
                         <div class="gallery-item-overlay">
                             <h3 class="gallery-item-title">Modern Architecture</h3>
                             <p class="gallery-item-category">Cityscapes</p>
@@ -240,9 +314,12 @@
                     </div>
                     
                     <div class="gallery-item" data-category="cityscapes">
-                        <img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?w=800&q=80" 
+                        <picture>
+        <source srcset="assets/images/portfolio/portfolio-13.webp" type="image/webp">
+        <img src="assets/images/portfolio/portfolio-13.jpg" 
                              alt="City night lights" 
                              loading="lazy">
+    </picture>
                         <div class="gallery-item-overlay">
                             <h3 class="gallery-item-title">City Lights</h3>
                             <p class="gallery-item-category">Cityscapes</p>
@@ -251,9 +328,12 @@
                     
                     <!-- Macro -->
                     <div class="gallery-item" data-category="macro">
-                        <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=800&q=80" 
+                        <picture>
+        <source srcset="assets/images/portfolio/portfolio-14.webp" type="image/webp">
+        <img src="assets/images/portfolio/portfolio-14.jpg" 
                              alt="Macro flower photography" 
                              loading="lazy">
+    </picture>
                         <div class="gallery-item-overlay">
                             <h3 class="gallery-item-title">Delicate Petals</h3>
                             <p class="gallery-item-category">Macro</p>
@@ -261,9 +341,12 @@
                     </div>
                     
                     <div class="gallery-item" data-category="macro">
-                        <img src="https://images.unsplash.com/photo-1416339442236-8ceb164046f8?w=800&q=80" 
+                        <picture>
+        <source srcset="assets/images/portfolio/portfolio-15.webp" type="image/webp">
+        <img src="assets/images/portfolio/portfolio-15.jpg" 
                              alt="Macro nature photography" 
                              loading="lazy">
+    </picture>
                         <div class="gallery-item-overlay">
                             <h3 class="gallery-item-title">Morning Dew</h3>
                             <p class="gallery-item-category">Macro</p>
@@ -271,9 +354,12 @@
                     </div>
                     
                     <div class="gallery-item" data-category="macro">
-                        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&q=80" 
+                        <picture>
+        <source srcset="assets/images/portfolio/portfolio-16.webp" type="image/webp">
+        <img src="assets/images/portfolio/portfolio-16.jpg" 
                              alt="Macro insect photography" 
                              loading="lazy">
+    </picture>
                         <div class="gallery-item-overlay">
                             <h3 class="gallery-item-title">Nature's Details</h3>
                             <p class="gallery-item-category">Macro</p>
@@ -282,9 +368,12 @@
                     
                     <!-- Custom Projects -->
                     <div class="gallery-item" data-category="custom">
-                        <img src="https://images.unsplash.com/photo-1452457807411-4979b707c5be?w=800&q=80" 
+                        <picture>
+        <source srcset="assets/images/portfolio/portfolio-17.webp" type="image/webp">
+        <img src="assets/images/portfolio/portfolio-17.jpg" 
                              alt="Custom photography project" 
                              loading="lazy">
+    </picture>
                         <div class="gallery-item-overlay">
                             <h3 class="gallery-item-title">Creative Vision</h3>
                             <p class="gallery-item-category">Custom</p>
@@ -292,9 +381,12 @@
                     </div>
                     
                     <div class="gallery-item" data-category="custom">
-                        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80" 
+                        <picture>
+        <source srcset="assets/images/portfolio/portfolio-18.webp" type="image/webp">
+        <img src="assets/images/portfolio/portfolio-18.jpg" 
                              alt="Artistic photography" 
                              loading="lazy">
+    </picture>
                         <div class="gallery-item-overlay">
                             <h3 class="gallery-item-title">Artistic Expression</h3>
                             <p class="gallery-item-category">Custom</p>
@@ -302,9 +394,12 @@
                     </div>
                     
                     <div class="gallery-item" data-category="custom">
-                        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&q=80" 
+                        <picture>
+        <source srcset="assets/images/portfolio/portfolio-19.webp" type="image/webp">
+        <img src="assets/images/portfolio/portfolio-19.jpg" 
                              alt="Commercial photography" 
                              loading="lazy">
+    </picture>
                         <div class="gallery-item-overlay">
                             <h3 class="gallery-item-title">Commercial Work</h3>
                             <p class="gallery-item-category">Custom</p>
@@ -421,5 +516,7 @@
     <script src="assets/js/gallery.js"></script>
     <script src="assets/js/lightbox.js"></script>
     <script src="assets/js/analytics.js"></script>
+    <script src="assets/js/enhancements.js" defer></script>
+    <script src="assets/js/sw-register.js" defer></script>
 </body>
 </html>
