@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Resource Hints -->
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
@@ -37,6 +41,7 @@
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/color-palette.css">
+    <link rel="stylesheet" href="assets/css/enhancements.css">
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -61,6 +66,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
     <link rel="icon" type="image/png" sizes="48x48" href="assets/images/logo/favicon-48x48.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "HCJK",
+        "jobTitle": "Professional Photographer",
+        "description": "Award-winning photographer specializing in capturing authentic moments and creating timeless memories.",
+        "url": "https://hcjk.org/about.html",
+        "image": "https://hcjk.org/assets/images/about/photographer.jpg",
+        "sameAs": [
+            "https://www.instagram.com/hcjkphotography",
+            "https://www.facebook.com/hcjkphotography"
+        ],
+        "knowsAbout": [
+            "Portrait Photography",
+            "Event Photography",
+            "Wedding Photography",
+            "Landscape Photography",
+            "Street Photography"
+        ]
+    }
+    </script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -506,5 +534,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/analytics.js"></script>
+    <script src="assets/js/enhancements.js" defer></script>
+    <script src="assets/js/sw-register.js" defer></script>
 </body>
 </html>
