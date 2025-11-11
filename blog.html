@@ -39,23 +39,7 @@
     <meta property="twitter:description" content="Read photography stories, travel adventures, and tips from HCJK Collection.">
     <meta property="twitter:image" content="https://www.hcjk.org/assets/images/blog/featured.jpg">
     
-    <!-- Favicon -->
-    
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/variables.css">
-    <link rel="stylesheet" href="assets/css/typography.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/color-palette.css">
-    <link rel="stylesheet" href="assets/css/enhancements.css">
-    <link rel="stylesheet" href="assets/css/final-fixes.css">
-    
-  
-    <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
-
-    <!-- Favicons -->
+        <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo/favicon-32x32.png">
@@ -84,8 +68,16 @@
         }
     }
     </script>
-</head>
+    <link rel="stylesheet" href="assets/css/loading-screen.css">
+    </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <img src="assets/images/logo/logo.png" alt="HCJK Collection" class="loading-logo">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">Loading</p>
+    </div>
+    
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3NKKV8P"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -95,7 +87,7 @@
     <a href="#main-content" class="skip-to-content">Skip to main content</a>
     
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+        <nav class="navbar" id="navbar">
         <div class="navbar-container">
             <a href="index.html" class="navbar-brand">
                 <picture>
@@ -121,7 +113,7 @@
                     <a href="about.html" class="navbar-link">About</a>
                 </li>
                 <li class="navbar-item">
-                    <a href="blog.html" class="navbar-link active">Blog</a>
+                    <!-- <a href="blog.html" class="navbar-link">Blog</a> -->
                 </li>
                 <li class="navbar-item">
                     <a href="booking.html" class="navbar-link">Booking</a>
@@ -544,5 +536,6 @@
     </script>
     <script src="assets/js/enhancements.js" defer></script>
     <script src="assets/js/sw-register.js" defer></script>
+    <script src="assets/js/loading-screen.js"></script>
 </body>
 </html>
