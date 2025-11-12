@@ -1,0 +1,36 @@
+Standardize Navigation, Logo Links & Add Loading Screen
+
+This PR standardizes navigation across all pages, ensures logo links work correctly, and adds a professional loading screen.
+
+CHANGES:
+1. Standardized Navigation (11 pages)
+   - Applied identical navigation to all pages
+   - Logo always links to index.html
+   - Active state highlights current page
+
+2. Logo Links to Index.html
+   - All pages have correct logo link
+   - Logo clickable and returns to homepage
+
+3. Favicon Matches Logo
+   - Verified favicon files
+   - All pages link to correct favicon
+
+4. Professional Loading Screen
+   - Created loading-screen.css
+   - Created loading-screen.js
+   - Added to all 11 pages
+   - Features: logo animation, spinner, smooth transitions
+
+FILES CREATED:
+- assets/css/loading-screen.css
+- assets/js/loading-screen.js
+- NAVIGATION_LOGO_LOADING_UPDATE.md
+
+PAGES UPDATED:
+- index.html, about.html, portfolio.html
+- booking.html, contact.html, blog.html
+- terms.html, privacy.html, thank-you.html
+- 404.html, offline.html
+
+All changes tested and ready for production.
