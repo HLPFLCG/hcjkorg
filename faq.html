@@ -42,22 +42,37 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
     <!-- Navigation -->
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="container">
-            <a href="index.html" class="navbar-brand" aria-label="HCJK Collection Home">
-                <img src="assets/images/logo/logo.png" alt="HCJK Collection Logo" class="navbar-logo">
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <picture>
+        <source srcset="assets/images/logo/HCJK-Stacked-large Background Removed.png" type="image/webp">
+        <img src="assets/images/logo/HCJK-Stacked-large Background Removed.png" alt="HCJK Collection Logo" width="120" height="40" loading="lazy">
+    </picture>
             </a>
-            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+            
             <ul class="navbar-menu" id="navbar-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="booking.html">Booking</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li class="navbar-item">
+                    <a href="index.html" class="navbar-link">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="portfolio.html" class="navbar-link">Portfolio</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="about.html" class="navbar-link">About</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="booking.html" class="navbar-link">Booking</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="contact.html" class="navbar-link">Contact</a>
+                </li>
             </ul>
         </div>
     </nav>
