@@ -28,7 +28,7 @@
     width: 100px;
     height: auto;
     margin-bottom: 2rem;
-    animation: fadeInScale 1s ease-in-out infinite alternate;
+    animation: fadeInScale 2s ease-in-out infinite alternate;
 }
 
 @keyframes fadeInScale {
@@ -48,7 +48,7 @@
     border: 3px solid rgba(114, 47, 55, 0.2);
     border-top-color: var(--color-accent, #722F37);
     border-radius: 50%;
-    animation: spin 1s linear infinite;
+    animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
@@ -80,3 +80,4 @@
 body.loading {
     overflow: hidden;
 }
+
