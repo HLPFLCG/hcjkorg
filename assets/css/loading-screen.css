@@ -25,7 +25,7 @@
 }
 
 .loading-logo {
-    width: 150px;
+    width: 100px;
     height: auto;
     margin-bottom: 2rem;
     animation: fadeInScale 1s ease-in-out infinite alternate;
