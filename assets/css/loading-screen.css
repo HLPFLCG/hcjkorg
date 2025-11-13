@@ -59,7 +59,7 @@
 
 .loading-text {
     margin-top: 1.5rem;
-    font-family: var(--font-secondary, 'Montserrat', sans-serif);
+    font-family: var(--font-hero, ''Eyesome',serif');
     font-size: 0.875rem;
     color: var(--color-secondary, #722F37);
     letter-spacing: 2px;
